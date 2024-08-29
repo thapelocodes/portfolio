@@ -2,9 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Contact = () => (
-  <div>
+  <div className="h-screen">
     <Header />
-    <main>
+    <main className="p-8 pt-20">
       <h1>Contact</h1>
     </main>
     <Footer />

@@ -24,7 +24,7 @@ const Blogs = () => {
     <div>
       <Header />
       <main>
-        <h1>Blog</h1>
+        <h1>Blogs</h1>
         {blogs.map((blog: any) => (
           <BlogCard
             key={blog.id}

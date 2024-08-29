@@ -6,12 +6,13 @@ import HeroSection from "../components/HeroSection";
 import BlogsSection from "@/components/BlogsSection";
 import ServicesSection from "@/components/ServicesSection";
 import ContactForm from "@/components/ContactForm";
+import "@/app/globals.css";
 
 const Home = () => (
   <div>
     <Header />
-    <main>
-      <h1>Welcome to my Portfolio</h1>
+    <main className="h-full p-8 pt-20">
+      <h1 className="text-center">Welcome to my Portfolio</h1>
       <HeroSection />
       <AboutSection />
       <ServicesSection />

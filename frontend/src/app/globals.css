@@ -6,13 +6,14 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 0, 7, 14;
+    --background-end-rgb: 70, 75, 105;
   }
 }
 
@@ -21,6 +22,9 @@ body {
   background: linear-gradient(
       to bottom,
       transparent,
+      transparent,
+      transparent,
+      transparent 75%,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
@@ -30,4 +34,50 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* .contact {
+  background: linear-gradient(
+      to bottom right,
+      #003,
+      #014,
+      #025,
+      #136,
+      #246,
+      #357,
+      #468,
+      rgb(var(--background-start-rgb))
+    )
+    rgb(var(--background-end-rgb));
+}
+
+.hero,
+.services,
+.blogs {
+  background: linear-gradient(
+      to bottom right,
+      #003,
+      #014,
+      #025,
+      #136,
+      #136,
+      #025,
+      #0136,
+      rgb(var(--background-start-rgb))
+    )
+    rgb(var(--background-end-rgb));
+} */
+
+.hero,
+.about,
+.projects,
+.services,
+.blogs,
+.contact {
+  background: linear-gradient(
+      to bottom right,
+      #012,
+      /* #0136, */ rgb(var(--background-start-rgb))
+    )
+    rgb(var(--background-end-rgb));
 }

@@ -1,6 +1,8 @@
 const HeroSection = () => (
-  <section className="hero-section">
-    <h3>Let&apos;s grow your online presence and user engagement!</h3>
+  <section className="hero p-2 w-full mx-auto my-4 bg-blue-950 rounded-xl md:w-9/12">
+    <h3 className="text-center">
+      Let&apos;s grow your online presence and user engagement!
+    </h3>
   </section>
 );
 

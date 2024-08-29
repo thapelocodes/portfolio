@@ -11,11 +11,11 @@ const ProjectCard = ({
   liveLink,
   githubLink,
 }: ProjectCardProps) => (
-  <div className="project-card">
-    <h3>{name}</h3>
-    <p>{description}</p>
-    <a href={liveLink}>GitHub</a>
-    <a href={githubLink}>Live Demo</a>
+  <div className="w-full md:w-1/3 mx-auto project-card flex flex-col my-2 p-2 bg-gradient-to-br from-blue-950 to-slate-950 rounded-xl text-center">
+    <h3 className="text-lg mb-4">{name}</h3>
+    <p className="h-40">{description}</p>
+    <a href={liveLink}>Live Demo</a>
+    <a href={githubLink}>GitHub</a>
   </div>
 );
 
