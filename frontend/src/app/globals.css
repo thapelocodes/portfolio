@@ -9,14 +9,6 @@
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 7, 14;
-    --background-end-rgb: 70, 75, 105;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -30,43 +22,26 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+header {
+  background: linear-gradient(
+    to bottom,
+    #89a,
+    #9ab,
+    #abc,
+    #bcd,
+    #cde,
+    #bcd,
+    #abc,
+    #9ab,
+    #89a
+  );
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-
-/* .contact {
-  background: linear-gradient(
-      to bottom right,
-      #003,
-      #014,
-      #025,
-      #136,
-      #246,
-      #357,
-      #468,
-      rgb(var(--background-start-rgb))
-    )
-    rgb(var(--background-end-rgb));
-}
-
-.hero,
-.services,
-.blogs {
-  background: linear-gradient(
-      to bottom right,
-      #003,
-      #014,
-      #025,
-      #136,
-      #136,
-      #025,
-      #0136,
-      rgb(var(--background-start-rgb))
-    )
-    rgb(var(--background-end-rgb));
-} */
 
 .hero,
 .about,
@@ -76,8 +51,60 @@ body {
 .contact {
   background: linear-gradient(
       to bottom right,
-      #012,
+      #789,
       /* #0136, */ rgb(var(--background-start-rgb))
     )
     rgb(var(--background-end-rgb));
+}
+
+@media screen and (min-width: 750px) {
+  .scrollContainer {
+    display: flex;
+    animation: scrollLeft 10s linear infinite;
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-194%);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 7, 14;
+    --background-end-rgb: 70, 75, 105;
+  }
+
+  header {
+    background: linear-gradient(
+      to bottom,
+      #012,
+      #123,
+      #234,
+      #345,
+      #345,
+      #234,
+      #123,
+      #012
+    );
+  }
+
+  .hero,
+  .about,
+  .projects,
+  .services,
+  .blogs,
+  .contact {
+    background: linear-gradient(
+        to bottom right,
+        #012,
+        /* #0136, */ rgb(var(--background-start-rgb))
+      )
+      rgb(var(--background-end-rgb));
+  }
 }

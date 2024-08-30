@@ -24,7 +24,7 @@ const AboutSection = () => (
       obtained my online certification from ALX Africa with a plethora of
       technical and soft skills.
     </p>
-    <button className="mt-2 p-1 bg-gradient-to-tr from-sky-700 to-slate-950 rounded-lg">
+    <button className="mt-2 py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-cyan-900 dark:to-slate-950 dark:hover:from-cyan-900 dark:hover:to-slate-900 rounded-lg">
       <Link href="/about">See more about me</Link>
     </button>
   </section>
