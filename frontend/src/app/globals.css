@@ -60,7 +60,7 @@ header {
 @media screen and (min-width: 750px) {
   .scrollContainer {
     display: flex;
-    animation: scrollLeft 10s linear infinite;
+    animation: scrollLeft 15s linear infinite;
   }
 
   @keyframes scrollLeft {
@@ -68,7 +68,7 @@ header {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-194%);
+      transform: translateX(-172.8%);
     }
   }
 }

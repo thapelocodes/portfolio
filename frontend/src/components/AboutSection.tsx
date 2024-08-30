@@ -9,7 +9,7 @@ const imageStyle = {
 };
 
 const AboutSection = () => (
-  <section className="about p-2 w-fit md:w-9/12 mx-auto text-center rounded-2xl">
+  <section className="about p-2 w-fit md:max-w-screen-sm mx-auto text-center rounded-2xl">
     <h2 className="m-2">About</h2>
     <div style={imageStyle} className="w-fit mx-auto my-2">
       <Image

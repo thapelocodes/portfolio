@@ -2,7 +2,7 @@ import Link from "next/link";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => (
-  <section className="projects md:w-9/12 mx-auto text-center bg-cyan-950 rounded-2xl p-3">
+  <section className="projects md:max-w-screen-sm mx-auto text-center bg-cyan-950 rounded-2xl p-3">
     <h2 className="m-2 text-xl">
       <Link href="/projects">Projects</Link>
     </h2>

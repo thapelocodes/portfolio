@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const ServicesSection = () => (
-  <section className="services w-full rounded-2xl my-2 md:w-9/12 mx-auto py-2 px-3 overflow-hidden">
+  <section className="services w-full rounded-2xl my-2 md:max-w-screen-sm mx-auto py-2 px-3 overflow-hidden">
     <h2 className="text-xl m-2">Services & Skills</h2>
     <div className="flex flex-col md:flex-row justify-between-2 md:whitespace-nowrap scrollContainer">
       <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-slate-700 p-1">
