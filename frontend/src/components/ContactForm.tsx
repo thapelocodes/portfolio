@@ -19,12 +19,12 @@ const ContactForm = () => (
           placeholder="Message"
           className="my-2 pl-5 pt-1 rounded-xl hover:border-2 hover:border-slate-800 dark:bg-gray-600"
         ></textarea>
-        <button className="mx-auto pb-1 my-2 rounded-2xl w-20 bg-gradient-to-tl dark:from-indigo-900 dark:to-slate-950 dark:hover:from-indigo-700 dark:hover:to-slate-900 dark:text-white">
+        <button className="mx-auto pb-1 my-2 rounded-2xl w-20 bg-gradient-to-tl from-indigo-500 to-slate-300 dark:from-indigo-900 dark:to-slate-950 dark:hover:from-indigo-700 dark:hover:to-slate-900 dark:text-white">
           Send
         </button>
       </div>
     </form>
-    <div className="w-fit mx-auto p-2 bg-gradient-to-br dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-xl my-1">
+    <div className="w-fit mx-auto p-2 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-xl my-1">
       <Link href="/contact" className="">
         Let&apos;s socialize
       </Link>
