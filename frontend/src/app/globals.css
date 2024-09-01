@@ -71,6 +71,10 @@ header {
       transform: translateX(-172.8%);
     }
   }
+
+  .scrollContainer:hover {
+    animation-play-state: paused;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
