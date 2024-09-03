@@ -49,17 +49,17 @@ const Header = () => {
               <Link href="/" className="pr-2">
                 Home
               </Link>
+              <Link href="/about" className="pr-2">
+                About
+              </Link>
+              <Link href="/services" className="pr-2">
+                Services
+              </Link>
               <Link href="/projects" className="pr-2">
                 Projects
               </Link>
               <Link href="/blogs" className="pr-2">
                 Blogs
-              </Link>
-              <Link href="/services" className="pr-2">
-                Services
-              </Link>
-              <Link href="/about" className="pr-2">
-                About
               </Link>
               <Link href="/contact" className="">
                 Contact
@@ -92,17 +92,17 @@ const Header = () => {
                 <Link href="/" className="px-2">
                   Home
                 </Link>
+                <Link href="/about" className="px-2">
+                  About
+                </Link>
+                <Link href="/services" className="px-2">
+                  Services
+                </Link>
                 <Link href="/projects" className="px-2">
                   Projects
                 </Link>
                 <Link href="/blogs" className="px-2">
                   Blogs
-                </Link>
-                <Link href="/services" className="px-2">
-                  Services
-                </Link>
-                <Link href="/about" className="px-2">
-                  About
                 </Link>
                 <Link href="/contact" className="px-2">
                   Contact
