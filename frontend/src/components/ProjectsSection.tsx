@@ -30,7 +30,7 @@ const ProjectsSection = () => (
         />
       </div>
     </div>
-    <div className="w-fit mx-auto p-2 bg-gradient-to-tl dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-xl transform transition-transform duration-200 hover:scale-110">
+    <div className="w-fit mx-auto p-2 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-xl transform transition-transform duration-200 hover:scale-110">
       <Link href="/projects">See more projects</Link>
     </div>
   </section>
