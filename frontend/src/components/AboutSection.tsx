@@ -5,7 +5,6 @@ const imageStyle = {
   overflow: "hidden",
   borderRadius: "100% 65% 65% 100% / 60% 60% 100% 100%",
   maxWidth: "50%",
-  height: 200,
 };
 
 const AboutSection = () => (
