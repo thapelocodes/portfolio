@@ -11,7 +11,7 @@ const ProjectCard = ({
   liveLink,
   githubLink,
 }: ProjectCardProps) => (
-  <div className="w-full mx-auto project-card flex flex-col my-2 p-2 bg-gradient-to-br from-blue-100 to-slate-2300 dark:from-blue-950 dark:to-slate-950 rounded-xl">
+  <div className="w-full mx-auto project-card flex flex-col my-2 p-2 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-blue-950 dark:to-slate-950 rounded-xl">
     <h3 className="text-lg mb-4">{name}</h3>
     <div className="pb-2">
       <p className="">{description}</p>
