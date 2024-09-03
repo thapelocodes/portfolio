@@ -29,7 +29,7 @@ const BlogsSection = () => (
           updatedAt="1st September 2024"
         />
       </Link>
-      <div className="w-fit mx-auto p-2 bg-gradient-to-tl dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-xl transform transition-transform duration-200 hover:scale-110">
+      <div className="w-fit mx-auto p-2 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-xl transform transition-transform duration-200 hover:scale-110">
         <Link href="blogs">Explore more blogs</Link>
       </div>
     </div>
