@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ContactForm = () => (
   <section className="md:max-w-screen-sm mx-auto contact dark:text-white p-2 rounded-xl">
-    <h2 className="w-fit mx-auto text-2xl p-2">Contact</h2>
+    <h2 className="w-fit mx-auto text-xl p-2">Contact</h2>
     <form className="w-9/12 mx-auto flex items-center">
       <div className="flex flex-col w-full mx-auto md:w-11/12 mx-auto">
         <input

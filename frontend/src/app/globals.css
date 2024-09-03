@@ -43,19 +43,14 @@ header {
   }
 }
 
-.hero,
-.about,
-.projects,
-.services,
-.blogs,
-.contact {
+/*section {
   background: linear-gradient(
       to bottom right,
       #789,
-      /* #0136, */ rgb(var(--background-start-rgb))
+      rgb(var(--background-start-rgb))
     )
     rgb(var(--background-end-rgb));
-}
+}*/
 
 @media screen and (min-width: 750px) {
   .scrollContainer {
@@ -98,17 +93,12 @@ header {
     );
   }
 
-  .hero,
-  .about,
-  .projects,
-  .services,
-  .blogs,
-  .contact {
+  /* .section {
     background: linear-gradient(
         to bottom right,
         #012,
-        /* #0136, */ rgb(var(--background-start-rgb))
+        rgb(var(--background-start-rgb))
       )
       rgb(var(--background-end-rgb));
-  }
+  } */
 }
