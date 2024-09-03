@@ -43,25 +43,43 @@ const Header = () => {
             style={{ borderRadius: "50%" }}
           />
         </Link>
-        <div className="flex">
+        <div className="flex flex-col">
           {windowSize > 750 && (
             <nav className="flex">
-              <Link href="/" className="pr-2">
+              <Link
+                href="/"
+                className="pr-2 transform transition-transform duration-200 hover:scale-110"
+              >
                 Home
               </Link>
-              <Link href="/about" className="pr-2">
+              <Link
+                href="/about"
+                className="pr-2 transform transition-transform duration-200 hover:scale-110"
+              >
                 About
               </Link>
-              <Link href="/services" className="pr-2">
+              <Link
+                href="/services"
+                className="pr-2 transform transition-transform duration-200 hover:scale-110"
+              >
                 Services
               </Link>
-              <Link href="/projects" className="pr-2">
+              <Link
+                href="/projects"
+                className="pr-2 transform transition-transform duration-200 hover:scale-110"
+              >
                 Projects
               </Link>
-              <Link href="/blogs" className="pr-2">
+              <Link
+                href="/blogs"
+                className="pr-2 transform transition-transform duration-200 hover:scale-110"
+              >
                 Blogs
               </Link>
-              <Link href="/contact" className="">
+              <Link
+                href="/contact"
+                className="transform transition-transform duration-200 hover:scale-110"
+              >
                 Contact
               </Link>
             </nav>
@@ -89,22 +107,40 @@ const Header = () => {
           {openMenu && windowSize <= 750 && (
             <div className="flex">
               <nav className="flex flex-col">
-                <Link href="/" className="px-2">
+                <Link
+                  href="/"
+                  className="px-2 transform transition-transform duration-200 hover:scale-110"
+                >
                   Home
                 </Link>
-                <Link href="/about" className="px-2">
+                <Link
+                  href="/about"
+                  className="px-2 transform transition-transform duration-200 hover:scale-110"
+                >
                   About
                 </Link>
-                <Link href="/services" className="px-2">
+                <Link
+                  href="/services"
+                  className="px-2 transform transition-transform duration-200 hover:scale-110"
+                >
                   Services
                 </Link>
-                <Link href="/projects" className="px-2">
+                <Link
+                  href="/projects"
+                  className="px-2 transform transition-transform duration-200 hover:scale-110"
+                >
                   Projects
                 </Link>
-                <Link href="/blogs" className="px-2">
+                <Link
+                  href="/blogs"
+                  className="px-2 transform transition-transform duration-200 hover:scale-110"
+                >
                   Blogs
                 </Link>
-                <Link href="/contact" className="px-2">
+                <Link
+                  href="/contact"
+                  className="px-2 transform transition-transform duration-200 hover:scale-110"
+                >
                   Contact
                 </Link>
               </nav>
