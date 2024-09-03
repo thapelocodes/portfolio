@@ -13,13 +13,13 @@ const About = () => (
   <div className="h-screen">
     <Header />
     <main className="p-8 pt-20">
-      <h1>About Me</h1>
-      <div style={imageStyle}>
+      <h1 className="text-2xl mb-2">About Me</h1>
+      <div style={imageStyle} className="mx-auto">
         <Image
           src="/M-9.jpg"
           alt="Thapelo M. Moumakoe"
-          width={200}
-          height={255}
+          width={2088}
+          height={3600}
         />
       </div>
       <p>
