@@ -2,6 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const ImageStyle = {
+  // maxWidth: "10%",
+};
+
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [windowSize, setWindowSize] = useState(0);
@@ -30,12 +34,12 @@ const Header = () => {
   return (
     <header className="z-10 dark:text-white py-2 flex fixed w-full">
       <div className="container mx-8 flex justify-between items-center">
-        <Link href="/">
+        <Link href="/" style={ImageStyle} className="max-w-10 md:max-w-12">
           <Image
             src="/thapelocodes-logo.png"
             alt="logo"
-            width={windowSize <= 750 ? 45 : 55}
-            height={windowSize <= 750 ? 45 : 55}
+            width={500}
+            height={500}
             style={{ borderRadius: "50%" }}
           />
         </Link>
@@ -49,7 +53,7 @@ const Header = () => {
                 Projects
               </Link>
               <Link href="/blogs" className="pr-2">
-                Blog
+                Blogs
               </Link>
               <Link href="/services" className="pr-2">
                 Services
@@ -92,7 +96,7 @@ const Header = () => {
                   Projects
                 </Link>
                 <Link href="/blogs" className="px-2">
-                  Blog
+                  Blogs
                 </Link>
                 <Link href="/services" className="px-2">
                   Services
