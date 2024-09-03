@@ -88,7 +88,7 @@ const Header = () => {
           </button>
           {openMenu && windowSize <= 750 && (
             <div className="flex">
-              <nav className="flex flex-col md:flex-row">
+              <nav className="flex flex-col">
                 <Link href="/" className="px-2">
                   Home
                 </Link>

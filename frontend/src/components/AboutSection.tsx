@@ -2,21 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 const imageStyle = {
-  width: 200,
-  height: 200,
   overflow: "hidden",
   borderRadius: "100% 65% 65% 100% / 60% 60% 100% 100%",
+  maxWidth: "50%",
 };
 
 const AboutSection = () => (
   <section className="about p-2 w-fit md:max-w-screen-sm mx-auto text-center rounded-2xl">
-    <h2 className="m-2">About</h2>
-    <div style={imageStyle} className="w-fit mx-auto my-2">
+    <h2 className="m-2 text-xl">About</h2>
+    <div style={imageStyle} className="profile w-fit mx-auto my-2">
       <Image
         src="/M-9.jpg"
         alt="Thapelo Michael Moumakoe"
-        width={200}
-        height={255}
+        width={2880}
+        height={3600}
+        layout="responsive"
       />
     </div>
     <p>
