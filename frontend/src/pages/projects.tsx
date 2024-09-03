@@ -24,7 +24,7 @@ const Projects = () => {
     <div className="h-full">
       <Header />
       <main className="p-8 pt-20">
-        <h1>Projects</h1>
+        <h1 className="text-2xl">Projects</h1>
         {/* {projects.map((project: any) => (
           <ProjectCard
             key={project.id}
