@@ -22,8 +22,8 @@ const AboutSection = () => (
     </div>
     <p>
       I am a self-taught developer based in Pretoria, South Africa. I recently
-      obtained my online certification from ALX Africa with a plethora of
-      technical and soft skills.
+      obtained my certification from ALX Africa with a plethora of technical and
+      soft skills.
     </p>
     <button className="mt-2 py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-cyan-900 dark:to-slate-950 dark:hover:from-cyan-900 dark:hover:to-slate-900 rounded-lg transform transition-transform duration-200 hover:scale-110">
       <Link href="/about">See more about me</Link>

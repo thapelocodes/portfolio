@@ -23,8 +23,19 @@ const About = () => (
         />
       </div>
       <p>
-        This is a portfolio website created using the MERN stack. It is a simple
-        website that showcases my projects, blog posts, and services.
+        I am a self-taught developer based in Pretoria, South Africa. I recently
+        obtained my certification from ALX Africa with a plethora of technical
+        and soft skills.
+      </p>
+      <p>
+        Here&apos;s my resume:{" "}
+        <a
+          href="https://docs.google.com/document/d/1VyPjNeAOjvbi7CqVomPRmkEvAHnICqhyoIzIk7Mk4Gw/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
       </p>
     </main>
     <Footer />
