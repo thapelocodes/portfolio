@@ -37,6 +37,16 @@ const About = () => (
           Resume
         </a>
       </p>
+      <p>
+        Here&apos;s my certificate:{" "}
+        <a
+          href="https://drive.google.com/file/d/10qXN1X57JYn9VoVLMsOy2AZFp6K_1duE/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Certificate
+        </a>
+      </p>
     </main>
     <Footer />
   </div>
