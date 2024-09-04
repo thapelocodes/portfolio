@@ -44,7 +44,7 @@ const Header = () => {
           />
         </Link>
         <div className="flex flex-col">
-          {windowSize > 750 && (
+          {windowSize >= 768 && (
             <nav className="flex">
               <Link
                 href="/"
@@ -104,7 +104,7 @@ const Header = () => {
               }`}
             ></span>
           </button>
-          {openMenu && windowSize <= 750 && (
+          {openMenu && windowSize < 768 && (
             <div className="flex">
               <nav className="flex flex-col">
                 <Link
