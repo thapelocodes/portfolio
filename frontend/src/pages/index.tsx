@@ -12,7 +12,7 @@ const Home = () => (
   <div>
     <Header />
     <main className="h-full p-8 pt-20">
-      <h1 className="text-center text-2xl">Welcome to my Portfolio</h1>
+      <h1 className="text-center text-3xl font-mono">thapelocodes</h1>
       <HeroSection />
       <AboutSection />
       <ServicesSection />
