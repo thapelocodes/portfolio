@@ -16,7 +16,8 @@ const AboutSection = () => (
         alt="Thapelo Michael Moumakoe"
         width={2880}
         height={3600}
-        layout="responsive"
+        placeholder="blur"
+        blurDataURL="/M-9.jpg"
       />
     </div>
     <p>

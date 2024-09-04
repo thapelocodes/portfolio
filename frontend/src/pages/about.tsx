@@ -18,8 +18,10 @@ const About = () => (
         <Image
           src="/M-9.jpg"
           alt="Thapelo M. Moumakoe"
-          width={2088}
+          width={2880}
           height={3600}
+          placeholder="blur"
+          blurDataURL="/M-9.jpg"
         />
       </div>
       <p className="my-2">
