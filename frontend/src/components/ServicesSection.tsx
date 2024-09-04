@@ -58,7 +58,7 @@ const ServicesSection = () => {
 
         {
           /* Duplicate for seamless scrolling */
-          windowSize > 750 && (
+          windowSize >= 768 && (
             <>
               <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
                 <Link href="/services/web-dev" className="">

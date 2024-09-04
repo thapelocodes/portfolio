@@ -52,7 +52,7 @@ header {
     rgb(var(--background-end-rgb));
 }*/
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .scrollContainer {
     display: flex;
     animation: scrollLeft 8s linear infinite;
