@@ -26,7 +26,7 @@ const Blogs = () => {
   return (
     <div>
       <Header />
-      <main className="pt-20 h-screen w-9/12 m-1">
+      <main className="pt-20 h-screen w-9/12 mx-auto">
         <h1 className="text-2xl m-2">Blogs</h1>
         {blogs.length > 0 ? (
           blogs.map((blog: any) => (
