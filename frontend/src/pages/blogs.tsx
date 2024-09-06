@@ -26,8 +26,8 @@ const Blogs = () => {
   return (
     <div>
       <Header />
-      <main className="pt-20 h-screen">
-        <h1 className="text-2xl">Blogs</h1>
+      <main className="pt-20 h-screen w-9/12 m-1">
+        <h1 className="text-2xl m-2">Blogs</h1>
         {blogs.length > 0 ? (
           blogs.map((blog: any) => (
             <Link key={blog._id} href={`/blogs/${blog._id}`}>
