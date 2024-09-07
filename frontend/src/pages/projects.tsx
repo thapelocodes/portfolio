@@ -25,41 +25,19 @@ const Projects = () => {
       <Header />
       <main className="p-8 pt-20">
         <h1 className="text-2xl">Projects</h1>
-        {/* {projects.map((project: any) => (
-          <ProjectCard
-            key={project.id}
-            name={project.name}
-            description={project.description}
-            liveLink={project.liveLink}
-            githubLink={project.githubLink}
-          />
-        ))} */}
-        <div className="flex flex-col w-full md:w-64 mx-auto py-3">
-          <div className="">
+        {projects.length > 0 ? (
+          projects.map((project: any) => (
             <ProjectCard
-              name="Project 1"
-              description="My first project. In this projects I built a clone of the ALX website using HTML, CSS and JavaScript."
-              liveLink="projects/project1"
-              githubLink="https://github.com/thapelocodes/alx-frontend-for-fun"
+              key={project.id}
+              name={project.name}
+              description={project.description}
+              liveLink={project.liveLink}
+              githubLink={project.githubLink}
             />
-          </div>
-          <div>
-            <ProjectCard
-              name="Project 2"
-              description="My second project"
-              liveLink="projects/project2"
-              githubLink="https://github.com/thapelocodes/alx-frontend-for-fun/tree/main/sass_scss"
-            />
-          </div>
-          <div>
-            <ProjectCard
-              name="Project 3"
-              description="My third project"
-              liveLink="projects/project3"
-              githubLink="https://github.com/thapelocodes/LyricLounge"
-            />
-          </div>
-        </div>
+          ))
+        ) : (
+          <p>No projects available.</p>
+        )}
       </main>
       <Footer />
     </div>
