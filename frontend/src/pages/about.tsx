@@ -12,7 +12,7 @@ const imageStyle = {
 const About = () => (
   <div className="">
     <Header />
-    <main className="p-8 pt-20 w-fit mx-auto md:max-w-screen-sm h-screen">
+    <main className="p-8 pt-20 w-fit mx-auto md:max-w-screen-sm h-screen sm:h-full md:h-screen">
       <h1 className="text-2xl mb-5">About Me</h1>
       <div style={imageStyle} className="mx-auto my-5">
         <Image
