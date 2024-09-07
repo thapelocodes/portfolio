@@ -18,10 +18,14 @@ const ProjectCard = ({
     </div>
     <div className="flex flex-col w-fit mx-auto py-2">
       <div className="mx-1 w-24 my-1 transform transition-transform duration-200 hover:scale-110 bg-gradient-to-tl dark:from-cyan-950 dark:to-slate-950 dark:hover:from-cyan-800 p-1 rounded-lg">
-        <a href={liveLink}>Live Demo</a>
+        <a href={liveLink} target="_blank" rel="noopener noreferrer">
+          Live Demo
+        </a>
       </div>
       <div className="mx-1 w-24 my-1 transform transition-transform duration-200 hover:scale-110 bg-gradient-to-tl dark:from-cyan-950 dark:to-slate-950 dark:hover:from-cyan-800 p-1 rounded-lg">
-        <a href={githubLink}>GitHub</a>
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
     </div>
   </div>
