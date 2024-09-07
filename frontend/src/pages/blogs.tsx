@@ -30,7 +30,7 @@ const Blogs = () => {
         <h1 className="text-2xl m-2">Blogs</h1>
         {blogs.length > 0 ? (
           blogs.map((blog: any) => (
-            <Link key={blog._id} href={`/blogs/${blog._id}`}>
+            <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
               <BlogCard
                 key={blog._id}
                 title={blog.title}
