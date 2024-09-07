@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <div className="h-full">
       <Header />
-      <main className="p-8 pt-20">
+      <main className="p-8 pt-20 h-screen w-9/12 mx-auto max-w-xl">
         <h1 className="text-2xl">Projects</h1>
         {projects.length > 0 ? (
           projects.map((project: any) => (
