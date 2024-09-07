@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => (
   <section className="projects md:max-w-screen-sm mx-auto p-3">
-    <h2 className="m-2 text-xl">Projects</h2>
+    <h2 className="m-2 text-xl">Projects I have worked on</h2>
     <div className="flex flex-col md:flex-row w-10/12 md:w-full mx-auto md:justify-between py-2">
       <div className="m-1 md:w-full">
         <ProjectCard

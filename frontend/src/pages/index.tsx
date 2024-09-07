@@ -4,7 +4,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import AboutSection from "../components/AboutSection";
 import HeroSection from "../components/HeroSection";
 import BlogsSection from "@/components/BlogsSection";
-import ServicesSection from "@/components/ServicesSection";
+// import ServicesSection from "@/components/ServicesSection";
 import ContactForm from "@/components/ContactForm";
 import "@/app/globals.css";
 
@@ -15,7 +15,7 @@ const Home = () => (
       <h1 className="text-center text-3xl font-mono">thapelocodes</h1>
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <ProjectsSection />
       <BlogsSection />
       <ContactForm />
