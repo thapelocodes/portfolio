@@ -58,12 +58,12 @@ const Header = () => {
               >
                 About
               </Link>
-              <Link
+              {/* <Link
                 href="/services"
                 className="pr-2 transform transition-transform duration-200 hover:scale-110"
               >
                 Services
-              </Link>
+              </Link> */}
               <Link
                 href="/projects"
                 className="pr-2 transform transition-transform duration-200 hover:scale-110"
@@ -119,12 +119,12 @@ const Header = () => {
                 >
                   About
                 </Link>
-                <Link
+                {/* <Link
                   href="/services"
                   className="px-2 transform transition-transform duration-200 hover:scale-110"
                 >
                   Services
-                </Link>
+                </Link> */}
                 <Link
                   href="/projects"
                   className="px-2 transform transition-transform duration-200 hover:scale-110"
