@@ -12,9 +12,9 @@ const imageStyle = {
 const About = () => (
   <div className="">
     <Header />
-    <main className="p-8 pt-20 w-fit mx-auto md:max-w-screen-sm h-screen sm:h-full md:h-screen">
-      <h1 className="text-2xl mb-5">About Me</h1>
-      <div style={imageStyle} className="mx-auto my-5">
+    <main className="p-8 pt-16 md:pt-20 w-fit mx-auto md:max-w-screen-sm h-screen sm:h-full md:h-screen text-secondary">
+      <h1 className="text-3xl text-shadow text-primary">About Me</h1>
+      <div style={imageStyle} className="profile mx-auto my-5">
         <Image
           src="/M-9.jpg"
           alt="Thapelo M. Moumakoe"
@@ -24,7 +24,7 @@ const About = () => (
           blurDataURL="/M-9.jpg"
         />
       </div>
-      <p className="my-2">
+      <p className="my-3">
         I am a self-taught developer based in Pretoria, South Africa. I recently
         obtained my certification from ALX Africa with a plethora of technical
         and soft skills.
@@ -35,7 +35,7 @@ const About = () => (
           href="https://docs.google.com/document/d/1VyPjNeAOjvbi7CqVomPRmkEvAHnICqhyoIzIk7Mk4Gw/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-500"
+          className="hover:text-blue-500 underline"
         >
           here
         </a>
@@ -46,7 +46,7 @@ const About = () => (
           href="https://drive.google.com/file/d/10qXN1X57JYn9VoVLMsOy2AZFp6K_1duE/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-500"
+          className="hover:text-blue-500 underline"
         >
           here
         </a>

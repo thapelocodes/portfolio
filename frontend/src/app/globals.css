@@ -7,6 +7,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   text-align: center;
+  --primary-font-family: "Fira Code", monospace;
+  --secondary-font-family: "Roboto", sans-serif;
+  --tertiary-font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -26,15 +29,25 @@ header {
   background: linear-gradient(
     to bottom,
     #89a,
-    #9ab,
     #abc,
     #bcd,
     #cde,
+    #cde,
     #bcd,
     #abc,
-    #9ab,
     #89a
   );
+}
+
+.text-shadow {
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+}
+
+.profile {
+  overflow: hidden;
+  border-radius: 100% 65% 65% 100% / 60% 60% 100% 100%;
+  max-width: 50%;
 }
 
 ::-webkit-scrollbar {
@@ -45,6 +58,24 @@ header {
 ::-webkit-scrollbar-thumb {
   background: #7e7e7e;
   border-radius: 10px;
+}
+
+@layer base {
+  .text-primary {
+    font-family: var(--primary-font-family);
+  }
+
+  .text-secondary {
+    font-family: var(--secondary-font-family);
+  }
+
+  .text-tertiary {
+    font-family: var(--tertiary-font-family);
+  }
+
+  .shadow-dark {
+    box-shadow: 0 0 10px 5px rgba(115, 120, 220, 0.1);
+  }
 }
 
 @layer utilities {
@@ -130,6 +161,14 @@ header {
   ::-webkit-scrollbar-thumb:hover {
     background: #347;
     transform: scale(0.5);
+  }
+
+  .text-shadow {
+    text-shadow: 5px 5px 2px rgba(255, 255, 255, 0.15);
+  }
+
+  .profile {
+    box-shadow: 0 0 10px 5px rgba(100, 106, 210, 0.3);
   }
 
   /* .section {

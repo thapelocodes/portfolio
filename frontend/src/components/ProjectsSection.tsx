@@ -2,8 +2,10 @@ import Link from "next/link";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => (
-  <section className="projects md:max-w-screen-sm mx-auto p-3">
-    <h2 className="m-2 text-xl">Projects I have worked on</h2>
+  <section className="projects md:max-w-screen-sm my-5 mx-auto p-3 rounded-xl shadow-lg dark:shadow-dark">
+    <h2 className="text-shadow text-tertiary m-2 text-xl">
+      Projects I have worked on
+    </h2>
     <div className="flex flex-col md:flex-row w-10/12 md:w-full mx-auto md:justify-between py-2">
       <div className="m-1 md:w-full">
         <ProjectCard
@@ -30,7 +32,7 @@ const ProjectsSection = () => (
         />
       </div>
     </div>
-    <div className="w-fit mx-auto p-2 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-xl transform transition-transform duration-200 hover:scale-110">
+    <div className="w-fit mx-auto p-2 px-4 shadow bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
       <Link href="/projects">See more projects</Link>
     </div>
   </section>

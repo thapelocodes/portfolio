@@ -2,9 +2,9 @@ import Link from "next/link";
 import BlogCard from "./BlogCard";
 
 const BlogsSection = () => (
-  <section className="blogs rounded-2xl md:max-w-screen-sm p-2 w-full my-2 mx-auto text-center">
-    <h2 className="text-xl m-1">Blogs</h2>
-    <div className="flex flex-col">
+  <section className="blogs dark:shadow-dark rounded-2xl md:max-w-screen-sm p-3 w-full my-5 mx-auto text-center shadow-lg">
+    <h2 className="text-shadow text-tertiary text-xl m-1">Blogs</h2>
+    <div className="flex flex-col my-2">
       <Link href="blogs/blog1">
         <BlogCard
           title="Blog 1"
@@ -29,9 +29,9 @@ const BlogsSection = () => (
           updatedAt="1st September 2024"
         />
       </Link>
-      <div className="w-fit mx-auto p-2 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-xl transform transition-transform duration-200 hover:scale-110">
+      <button className="text-tertiary shadow w-fit mt-3 mx-auto py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
         <Link href="blogs">Explore more blogs</Link>
-      </div>
+      </button>
     </div>
   </section>
 );

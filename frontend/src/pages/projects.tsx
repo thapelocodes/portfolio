@@ -23,21 +23,23 @@ const Projects = () => {
   return (
     <div className="h-full">
       <Header />
-      <main className="p-8 pt-20 h-screen w-9/12 mx-auto max-w-xl">
-        <h1 className="text-2xl">Projects</h1>
-        {projects.length > 0 ? (
-          projects.map((project: any) => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              description={project.description}
-              liveLink={project.liveLink}
-              githubLink={project.githubLink}
-            />
-          ))
-        ) : (
-          <p>No projects available.</p>
-        )}
+      <main className="p-8 pt-16 md:pt-20 h-screen w-9/12 mx-auto max-w-xl">
+        <h1 className="text-3xl text-shadow text-primary">Projects</h1>
+        <div className="my-5">
+          {projects.length > 0 ? (
+            projects.map((project: any) => (
+              <ProjectCard
+                key={project.id}
+                name={project.name}
+                description={project.description}
+                liveLink={project.liveLink}
+                githubLink={project.githubLink}
+              />
+            ))
+          ) : (
+            <p>No projects available.</p>
+          )}
+        </div>
       </main>
       <Footer />
     </div>
