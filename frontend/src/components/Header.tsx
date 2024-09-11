@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <header className="z-10 dark:text-white py-2 flex fixed w-full shadow-lg">
-      <div className="container mx-8 flex justify-between items-center text-tertiary text-xs sm:text-sm md:text-base">
+      <div className="container mx-8 flex justify-between items-center text-tertiary font-medium text-xs sm:text-sm md:text-base">
         <Link href="/" className="max-w-10 md:max-w-12 drop-shadow-lg">
           <Image
             src="/thapelocodes-logo.png"
@@ -42,42 +42,52 @@ const Header = () => {
         <div className="flex flex-col md:flex-row items-center">
           {windowSize >= 768 && (
             <nav className="flex">
-              <Link
-                href="/"
-                className="pr-2 transform transition-transform duration-200 hover:scale-110"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="pr-2 transform transition-transform duration-200 hover:scale-110"
-              >
-                About
-              </Link>
+              <button>
+                <Link
+                  href="/"
+                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
+                >
+                  Home
+                </Link>
+              </button>
+              <button>
+                <Link
+                  href="/about"
+                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
+                >
+                  About
+                </Link>
+              </button>
               {/* <Link
                 href="/services"
                 className="pr-2 transform transition-transform duration-200 hover:scale-110"
               >
                 Services
               </Link> */}
-              <Link
-                href="/projects"
-                className="pr-2 transform transition-transform duration-200 hover:scale-110"
-              >
-                Projects
-              </Link>
-              <Link
-                href="/blogs"
-                className="pr-2 transform transition-transform duration-200 hover:scale-110"
-              >
-                Blogs
-              </Link>
-              <Link
-                href="/contact"
-                className="transform transition-transform duration-200 hover:scale-110"
-              >
-                Contact
-              </Link>
+              <button>
+                <Link
+                  href="/projects"
+                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
+                >
+                  Projects
+                </Link>
+              </button>
+              <button>
+                <Link
+                  href="/blogs"
+                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
+                >
+                  Blogs
+                </Link>
+              </button>
+              <button>
+                <Link
+                  href="/contact"
+                  className="font-semibold transform transition-transform duration-200 hover:scale-110"
+                >
+                  Contact
+                </Link>
+              </button>
             </nav>
           )}
           <button
@@ -103,42 +113,52 @@ const Header = () => {
           {openMenu && windowSize < 768 && (
             <div className="m-3">
               <nav className="flex flex-col">
-                <Link
-                  href="/"
-                  className="px-2 transform transition-transform duration-200 hover:scale-110"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className="px-2 transform transition-transform duration-200 hover:scale-110"
-                >
-                  About
-                </Link>
+                <button className="my-1">
+                  <Link
+                    href="/"
+                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
+                  >
+                    Home
+                  </Link>
+                </button>
+                <button className="my-1">
+                  <Link
+                    href="/about"
+                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
+                  >
+                    About
+                  </Link>
+                </button>
                 {/* <Link
                   href="/services"
                   className="px-2 transform transition-transform duration-200 hover:scale-110"
                 >
                   Services
                 </Link> */}
-                <Link
-                  href="/projects"
-                  className="px-2 transform transition-transform duration-200 hover:scale-110"
-                >
-                  Projects
-                </Link>
-                <Link
-                  href="/blogs"
-                  className="px-2 transform transition-transform duration-200 hover:scale-110"
-                >
-                  Blogs
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-2 transform transition-transform duration-200 hover:scale-110"
-                >
-                  Contact
-                </Link>
+                <button className="my-1">
+                  <Link
+                    href="/projects"
+                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
+                  >
+                    Projects
+                  </Link>
+                </button>
+                <button className="my-1">
+                  <Link
+                    href="/blogs"
+                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
+                  >
+                    Blogs
+                  </Link>
+                </button>
+                <button className="my-1">
+                  <Link
+                    href="/contact"
+                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
+                  >
+                    Contact
+                  </Link>
+                </button>
               </nav>
             </div>
           )}

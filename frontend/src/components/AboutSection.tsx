@@ -18,7 +18,7 @@ const AboutSection = () => (
       Hi there! I&apos;m Thapelo and I code. Of course, as a software engineer I
       do other things too but coding takes the cup.
     </p>
-    <button className="text-tertiary  py-2 shadow px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-cyan-900 dark:to-slate-950 dark:hover:from-cyan-900 dark:hover:to-slate-900 rounded-3xl transform transition-transform duration-200 hover:scale-110">
+    <button className="text-tertiary font-medium py-2 shadow px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-cyan-900 dark:to-slate-950 dark:hover:from-cyan-900 dark:hover:to-slate-900 rounded-3xl transform transition-transform duration-200 hover:scale-110">
       <Link href="/about">Learn more about me</Link>
     </button>
   </section>

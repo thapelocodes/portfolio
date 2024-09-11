@@ -21,16 +21,16 @@ const ContactForm = () => (
           placeholder="Message"
           className="shadow-inner shadow-lg my-2 pl-5 pt-1 rounded-xl hover:border-2 hover:border-slate-800 dark:bg-gray-600"
         ></textarea>
-        <button className="shadow mx-auto py-1 my-2 rounded-2xl w-20 bg-gradient-to-tl from-indigo-500 to-slate-300 dark:from-indigo-900 dark:to-slate-950 dark:hover:from-indigo-700 dark:hover:to-slate-900 dark:text-white transform transition-transform duration-200 hover:scale-110">
+        <button className="text-tertiary font-medium shadow mx-auto py-1 my-2 rounded-2xl w-20 bg-gradient-to-tl from-indigo-500 to-slate-300 dark:from-indigo-900 dark:to-slate-950 dark:hover:from-indigo-700 dark:hover:to-slate-900 dark:text-white transform transition-transform duration-200 hover:scale-110">
           Send
         </button>
       </div>
     </form>
-    <div className="shadow w-fit mx-auto p-2 px-4 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-3xl my-1 transform transition-transform duration-200 hover:scale-110">
+    <button className="text-tertiary font-medium shadow w-fit mx-auto p-2 px-4 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-3xl my-1 transform transition-transform duration-200 hover:scale-110">
       <Link href="/contact" className="">
         Let&apos;s socialize
       </Link>
-    </div>
+    </button>
   </section>
 );
 

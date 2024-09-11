@@ -29,7 +29,7 @@ const BlogsSection = () => (
           updatedAt="1st September 2024"
         />
       </Link>
-      <button className="text-tertiary shadow w-fit mt-3 mx-auto py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
+      <button className="text-tertiary font-medium shadow w-fit mt-3 mx-auto py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
         <Link href="blogs">Explore more blogs</Link>
       </button>
     </div>
