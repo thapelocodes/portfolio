@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,6 +50,7 @@ header {
   overflow: hidden;
   border-radius: 100% 65% 65% 100% / 60% 60% 100% 100%;
   max-width: 50%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 80, 0.3);
 }
 
 ::-webkit-scrollbar {
