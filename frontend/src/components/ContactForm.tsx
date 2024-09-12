@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const ContactForm = () => (
-  <section className="md:max-w-screen-sm my-5 shadow-lg dark:shadow-dark mx-auto contact dark:text-white p-2 rounded-xl bg-gradient-to-t from-slate-300 via-zinc-200 to-slate-100 dark:from-slate-700 dark:via-zinc-900 dark:to-slate-900">
+  <section className="md:max-w-screen-sm my-5 shadow-lg dark:shadow-dark mx-auto contact dark:text-white p-2 rounded-xl bg-gradient-to-t from-slate-300 via-zinc-200 to-slate-100 dark:from-slate-950 dark:via-zinc-900 dark:to-slate-900">
     <h2 className="w-fit mx-auto text-xl p-2 text-shadow text-tertiary">
       Contact
     </h2>

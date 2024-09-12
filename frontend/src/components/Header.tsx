@@ -42,49 +42,34 @@ const Header = () => {
         <div className="flex flex-col md:flex-row items-center">
           {windowSize >= 768 && (
             <nav className="flex">
-              <button>
-                <Link
-                  href="/"
-                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
-                >
+              <button className="m-1 transform transition-transform duration-200 hover:scale-125">
+                <Link href="/" className="font-semibold pr-2">
                   Home
                 </Link>
               </button>
-              <button>
-                <Link
-                  href="/about"
-                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
-                >
+              <button className="m-1 transform transition-transform duration-200 hover:scale-125">
+                <Link href="/about" className="font-semibold pr-2">
                   About
                 </Link>
               </button>
               {/* <Link
                 href="/services"
-                className="pr-2 transform transition-transform duration-200 hover:scale-110"
+                className="pr-2 transform transition-transform duration-200 hover:scale-125"
               >
                 Services
               </Link> */}
-              <button>
-                <Link
-                  href="/projects"
-                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
-                >
+              <button className="m-1 transform transition-transform duration-200 hover:scale-125">
+                <Link href="/projects" className="font-semibold pr-2">
                   Projects
                 </Link>
               </button>
-              <button>
-                <Link
-                  href="/blogs"
-                  className="font-semibold pr-2 transform transition-transform duration-200 hover:scale-110"
-                >
+              <button className="m-1 transform transition-transform duration-200 hover:scale-125">
+                <Link href="/blogs" className="font-semibold pr-2">
                   Blogs
                 </Link>
               </button>
-              <button>
-                <Link
-                  href="/contact"
-                  className="font-semibold transform transition-transform duration-200 hover:scale-110"
-                >
+              <button className="m-1 transform transition-transform duration-200 hover:scale-125">
+                <Link href="/contact" className="font-semibold">
                   Contact
                 </Link>
               </button>
@@ -113,49 +98,34 @@ const Header = () => {
           {openMenu && windowSize < 768 && (
             <div className="m-3">
               <nav className="flex flex-col">
-                <button className="my-1">
-                  <Link
-                    href="/"
-                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
-                  >
+                <button className="my-1 transform transition-transform duration-200 hover:scale-125">
+                  <Link href="/" className="font-semibold px-2">
                     Home
                   </Link>
                 </button>
-                <button className="my-1">
-                  <Link
-                    href="/about"
-                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
-                  >
+                <button className="my-1 transform transition-transform duration-200 hover:scale-125">
+                  <Link href="/about" className="font-semibold px-2">
                     About
                   </Link>
                 </button>
                 {/* <Link
                   href="/services"
-                  className="px-2 transform transition-transform duration-200 hover:scale-110"
+                  className="px-2 transform transition-transform duration-200 hover:scale-125"
                 >
                   Services
                 </Link> */}
-                <button className="my-1">
-                  <Link
-                    href="/projects"
-                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
-                  >
+                <button className="my-1 transform transition-transform duration-200 hover:scale-125">
+                  <Link href="/projects" className="font-semibold px-2">
                     Projects
                   </Link>
                 </button>
-                <button className="my-1">
-                  <Link
-                    href="/blogs"
-                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
-                  >
+                <button className="my-1 transform transition-transform duration-200 hover:scale-125">
+                  <Link href="/blogs" className="font-semibold px-2">
                     Blogs
                   </Link>
                 </button>
-                <button className="my-1">
-                  <Link
-                    href="/contact"
-                    className="font-semibold px-2 transform transition-transform duration-200 hover:scale-110"
-                  >
+                <button className="my-1 transform transition-transform duration-200 hover:scale-125">
+                  <Link href="/contact" className="font-semibold px-2">
                     Contact
                   </Link>
                 </button>
