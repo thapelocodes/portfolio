@@ -1,11 +1,45 @@
 import Link from "next/link";
 import BlogCard from "./BlogCard";
+import { useEffect, useState } from "react";
+import api from "@/utils/api";
 
-const BlogsSection = () => (
-  <section className="blogs dark:shadow-dark rounded-2xl md:max-w-screen-sm p-3 w-full my-5 mx-auto text-center shadow-lg">
-    <h2 className="text-shadow text-tertiary text-xl m-1">Blogs</h2>
-    <div className="flex flex-col my-2">
-      <Link href="blogs/blog1">
+const BlogsSection = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await api.get("/blogs");
+        console.log("Blogs response: ", response);
+        setBlogs(response.data);
+      } catch (err) {
+        console.error("Error fetching blogs: ", err);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  return (
+    <section className="blogs dark:shadow-dark rounded-2xl md:max-w-screen-sm p-3 w-full my-5 mx-auto text-center shadow-lg">
+      <h2 className="text-shadow text-tertiary text-xl m-1">Blogs</h2>
+      <div className="flex flex-col my-2">
+        {blogs.length > 0 ? (
+          blogs.map((blog: any) => (
+            <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
+              <BlogCard
+                key={blog._id}
+                title={blog.title}
+                content={blog.content}
+                createdAt={new Date(blog.createdAt).toLocaleDateString()}
+                updatedAt={new Date(blog.updatedAt).toLocaleDateString()}
+              />
+            </Link>
+          ))
+        ) : (
+          <p>No blogs available.</p>
+        )}
+        {/* <Link href="blogs/blog1">
         <BlogCard
           title="Blog 1"
           content="This is my first blog. Lorem ipsum odor amet, consectetuer adipiscing elit. Netus phasellus laoreet ut a libero? Rutrum suscipit natoque cursus nisi interdum hac. Vulputate aliquam tempus feugiat egestas diam sociosqu tristique lacinia duis. Rutrum faucibus dui etiam magna est consequat congue felis lacinia. Nascetur ridiculus vel vivamus egestas varius in blandit. Cubilia erat aptent hac vel, tortor torquent. Nullam eleifend nec, sed integer semper volutpat? Eget vivamus eleifend mauris nisi per in fringilla."
@@ -28,12 +62,14 @@ const BlogsSection = () => (
           createdAt="1st September 2024"
           updatedAt="1st September 2024"
         />
-      </Link>
-      <button className="text-tertiary font-medium shadow w-fit mt-3 mx-auto py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
-        <Link href="blogs">Explore more blogs</Link>
-      </button>
-    </div>
-  </section>
-);
+      </Link> */}
+
+        <button className="text-tertiary font-medium shadow w-fit mt-3 mx-auto py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
+          <Link href="blogs">Explore more blogs</Link>
+        </button>
+      </div>
+    </section>
+  );
+};
 
 export default BlogsSection;
