@@ -32,7 +32,7 @@ const About = () => (
       <p className="my-2">
         See my resume{" "}
         <a
-          href="https://docs.google.com/document/d/1VyPjNeAOjvbi7CqVomPRmkEvAHnICqhyoIzIk7Mk4Gw/edit?usp=sharing"
+          href="https://drive.google.com/file/d/1utNUuc9L_ijoXjfyqyMr-yflr80t_v3z/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-500 underline"
