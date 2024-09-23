@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <div className="h-full">
       <Header />
-      <main className="p-8 pt-16 md:pt-20 h-screen w-9/12 mx-auto max-w-xl">
+      <main className="p-8 pt-16 md:pt-20 w-9/12 mx-auto max-w-xl">
         <h1 className="text-3xl text-shadow text-primary">Projects</h1>
         <div className="my-5">
           {projects.length > 0 ? (
