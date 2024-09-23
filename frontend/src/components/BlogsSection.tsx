@@ -5,6 +5,8 @@ import api from "@/utils/api";
 
 const BlogsSection = () => {
   const [blogs, setBlogs] = useState([]);
+  const blogsToDisplay =
+    blogs.length >= 3 ? blogs.reverse().slice(0, 3) : blogs.reverse();
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -24,8 +26,8 @@ const BlogsSection = () => {
     <section className="blogs dark:shadow-dark rounded-2xl md:max-w-screen-sm p-3 w-full my-5 mx-auto text-center shadow-lg">
       <h2 className="text-shadow text-tertiary text-xl m-1">Blogs</h2>
       <div className="flex flex-col my-2">
-        {blogs.length > 0 ? (
-          blogs.map((blog: any) => (
+        {blogsToDisplay.length > 0 ? (
+          blogsToDisplay.map((blog: any) => (
             <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
               <BlogCard
                 key={blog._id}

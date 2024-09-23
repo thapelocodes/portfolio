@@ -5,7 +5,8 @@ import api from "@/utils/api";
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
-  const projectsToDisplay = projects.reverse().slice(0, 3);
+  const projectsToDisplay =
+    projects.length >= 3 ? projects.reverse().slice(0, 3) : projects.reverse();
 
   useEffect(() => {
     const fetchProjects = async () => {
