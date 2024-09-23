@@ -5,6 +5,7 @@ import api from "@/utils/api";
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
+  const projectsToDisplay = projects.reverse().slice(0, 3);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -24,8 +25,8 @@ const ProjectsSection = () => {
         Projects I have worked on
       </h2>
       <div className="flex flex-col md:flex-row w-10/12 md:w-full mx-auto md:justify-between py-2">
-        {projects.length > 0 ? (
-          projects.map((project: any) => (
+        {projectsToDisplay.length > 0 ? (
+          projectsToDisplay.map((project: any) => (
             <ProjectCard
               key={project.id}
               name={project.name}
