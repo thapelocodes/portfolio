@@ -4,6 +4,7 @@ import connectDB from "./config/db";
 import dotenv from "dotenv";
 import blogRoutes from "./routes/blogRoutes";
 import projectRoutes from "./routes/projectRoutes";
+import messageRoutes from "./routes/messageRoutes";
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 app.use("/api/blogs", blogRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/contacts", messageRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
