@@ -1,8 +1,7 @@
+"use client";
 import { useState, useEffect } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import ProjectCard from "../components/ProjectCard";
-import api from "../utils/api";
+import ProjectCard from "@/components/ProjectCard";
+import api from "@/utils/api";
 import "@/app/globals.css";
 
 const Projects = () => {
@@ -22,7 +21,6 @@ const Projects = () => {
 
   return (
     <div className="h-full">
-      <Header />
       <main className="p-8 pt-16 md:pt-20 w-9/12 mx-auto max-w-xl">
         <h1 className="text-3xl text-shadow text-primary">Projects</h1>
         <div className="my-5">
@@ -41,7 +39,6 @@ const Projects = () => {
           )}
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

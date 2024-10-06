@@ -1,7 +1,6 @@
+"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import api from "@/utils/api";
 import "@/app/globals.css";
@@ -25,7 +24,6 @@ const Blogs = () => {
 
   return (
     <div>
-      <Header />
       <main className="pt-16 md:pt-20 h-screen w-9/12 mx-auto">
         <h1 className="text-3xl m-2 text-primary text-shadow">Blogs</h1>
         <div className="my-5">
@@ -46,7 +44,6 @@ const Blogs = () => {
           )}
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

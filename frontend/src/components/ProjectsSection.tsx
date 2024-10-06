@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import ProjectCard from "./ProjectCard";
 import { useEffect, useState } from "react";

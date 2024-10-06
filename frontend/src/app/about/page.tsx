@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import "@/app/globals.css";
 
@@ -11,7 +9,6 @@ const imageStyle = {
 
 const About = () => (
   <div className="">
-    <Header />
     <main className="p-8 pt-16 md:pt-20 w-fit mx-auto md:max-w-screen-sm h-screen sm:h-full md:h-screen text-secondary">
       <h1 className="text-3xl text-shadow text-primary">About Me</h1>
       <div style={imageStyle} className="profile mx-auto my-5">
@@ -52,7 +49,6 @@ const About = () => (
         </a>
       </p>
     </main>
-    <Footer />
   </div>
 );
 
