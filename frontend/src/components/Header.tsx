@@ -98,7 +98,7 @@ const Header = () => {
             ></span>
           </button>
           {openMenu && windowSize < 768 && (
-            <div className="m-3">
+            <div className="m-3 p-3 absolute mt-14 right-1 rounded-lg bg-gradient-to-br from-blue-950 via-slate-900 to-zinc-950 border border-transparent shadow-md shadow-blue-900 animate-slide-in-from-top">
               <nav className="flex flex-col">
                 <button className="my-1 transform transition-transform duration-200 hover:scale-125">
                   <Link href="/" className="font-semibold px-2">
