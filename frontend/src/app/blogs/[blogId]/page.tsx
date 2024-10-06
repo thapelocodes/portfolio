@@ -1,7 +1,6 @@
+"use client";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import api from "@/utils/api";
 import "@/app/globals.css";
 
@@ -26,7 +25,6 @@ const OpenBlog = () => {
 
   return (
     <div className="">
-      <Header />
       <main className="pt-20 h-screen w-11/12 mx-auto">
         {blog ? (
           <>
@@ -49,7 +47,6 @@ const OpenBlog = () => {
           <p>No blog found.</p>
         )}
       </main>
-      <Footer />
     </div>
   );
 };
