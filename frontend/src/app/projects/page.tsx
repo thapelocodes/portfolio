@@ -20,16 +20,18 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="h-full">
-      <main className="p-8 pt-16 md:pt-20 w-9/12 mx-auto max-w-xl">
+    <div className="min-h-screen">
+      <main className="p-8 pt-0 w-9/12 mx-auto max-w-xl">
         <h1 className="text-3xl text-shadow text-primary">Projects</h1>
         <div className="my-5">
           {projects.length > 0 ? (
             projects.map((project: any) => (
               <ProjectCard
                 key={project.id}
+                id={project._id}
                 name={project.name}
                 description={project.description}
+                article={project.article}
                 liveLink={project.liveLink}
                 githubLink={project.githubLink}
               />

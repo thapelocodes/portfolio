@@ -1,6 +1,3 @@
-"use client";
-import "@/app/globals.css";
-
 const Services = () => (
   <div className="">
     <main className="pt-20 h-screen">

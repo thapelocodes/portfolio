@@ -23,7 +23,7 @@ export default function RootLayout({
           {/* <QueryClientWrapper> */}
           {/* <AuthProviderWrapper> */}
           <Header />
-          <div className="pt-12">{children}</div>
+          <div className="pt-16 md:pt-20">{children}</div>
           <Footer />
           {/* </AuthProviderWrapper> */}
           {/* </QueryClientWrapper> */}

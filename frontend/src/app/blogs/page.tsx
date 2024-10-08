@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
 import api from "@/utils/api";
-import "@/app/globals.css";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -24,7 +23,7 @@ const Blogs = () => {
 
   return (
     <div>
-      <main className="pt-16 md:pt-20 h-screen w-9/12 mx-auto">
+      <main className="min-h-screen w-9/12 mx-auto">
         <h1 className="text-3xl m-2 text-primary text-shadow">Blogs</h1>
         <div className="my-5">
           {blogs.length > 0 ? (

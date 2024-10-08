@@ -8,7 +8,7 @@ import "@/app/globals.css";
 
 const Home = () => (
   <div>
-    <main className="p-8 md:pt-12">
+    <main className="p-8 pt-0">
       <h1 className="text-primary text-shadow text-center text-3xl">
         thapelocodes
       </h1>

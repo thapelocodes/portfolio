@@ -1,19 +1,21 @@
 "use client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import api from "@/utils/api";
-import "@/app/globals.css";
+import Image from "next/image";
+import BackIconBlack from "@/assets/back-svgrepo-com.svg";
+import BackIconWhite from "@/assets/back-white-svgrepo-com.svg";
 
-const OpenBlog = () => {
+const OpenBlog = ({ params }: { params: { blogId: string } }) => {
   const router = useRouter();
-  const { id } = router.query;
+  const { blogId } = params;
   const [blog, setBlog] = useState<any>(null);
 
   useEffect(() => {
-    if (id) {
+    if (blogId) {
       const fetchBlog = async () => {
         try {
-          const response = await api.get(`/blogs/${id}`);
+          const response = await api.get(`/blogs/${blogId}`);
           setBlog(response.data);
         } catch (err) {
           console.error("Error fetching blog: ", err);
@@ -21,18 +23,31 @@ const OpenBlog = () => {
       };
       fetchBlog();
     }
-  }, [id]);
+  }, [blogId]);
 
   return (
     <div className="">
-      <main className="pt-20 h-screen w-11/12 mx-auto">
+      <main className="min-h-screen w-11/12 mx-auto">
         {blog ? (
           <>
             <button
               onClick={() => router.back()}
-              className="flex fixed z-10 bg-gradient-to-br from-transparent to-slate-500 dark:from-cyan-950 dark:to-slate-950 py-2 px-4 rounded-3xl transform transition-transform duration-200 hover:scale-110 hover:to-slate-600 dark:hover:from-cyan-900"
+              className="flex fixed z-10 hover:bg-gray-400 hover:bg-opacity-40 rounded-full p-2"
             >
-              Back
+              <Image
+                src={BackIconBlack}
+                alt="Back Icon"
+                width={25}
+                height={25}
+                className="dark:hidden"
+              />
+              <Image
+                src={BackIconWhite}
+                alt="Back Icon"
+                width={25}
+                height={25}
+                className="hidden dark:block"
+              />
             </button>
             <h1 className="text-2xl m-2">{blog.title}</h1>
             <p className="m-2">{blog.content}</p>
