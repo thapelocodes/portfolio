@@ -1,13 +1,38 @@
 "use client";
 import Link from "next/link";
 import BlogCard from "./BlogCard";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import api from "@/utils/api";
 
 const BlogsSection = () => {
   const [blogs, setBlogs] = useState([]);
   const blogsToDisplay =
     blogs.length >= 3 ? blogs.reverse().slice(0, 3) : blogs.reverse();
+
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Function to check if the element is visible in the viewport
+  const checkIfVisible = () => {
+    if (elementRef.current) {
+      const { top, bottom } = elementRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // If the element is in the viewport
+      if (top < windowHeight - 200 && bottom > 0) {
+        setIsVisible(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkIfVisible);
+    checkIfVisible(); // Initial check on mount
+
+    return () => {
+      window.removeEventListener("scroll", checkIfVisible);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -24,8 +49,15 @@ const BlogsSection = () => {
   }, []);
 
   return (
-    <section className="blogs dark:shadow-dark rounded-2xl md:max-w-screen-lg p-3 w-full my-5 mx-auto text-center shadow-lg">
-      <h2 className="text-shadow text-tertiary text-xl m-1">Blogs</h2>
+    <section
+      ref={elementRef}
+      className={`blogs dark:shadow-dark rounded-2xl md:max-w-screen-lg p-3 w-full my-5 mx-auto text-center shadow-lg transition-transform duration-500 ${
+        isVisible
+          ? "animate-slidInLeft"
+          : "opacity-0 transform translate-x-full"
+      }`}
+    >
+      <h2 className="text-shadow text-tertiary text-2xl m-1">Blogs</h2>
       <div className="flex flex-col my-2">
         {blogsToDisplay.length > 0 ? (
           blogsToDisplay.map((blog: any) => (

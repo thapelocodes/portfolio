@@ -17,13 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-roboto antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`text-secondary antialiased`}>
         <div className="">
           {/* <QueryClientWrapper> */}
           {/* <AuthProviderWrapper> */}
           <Header />
-          <div className="pt-16 md:pt-20">{children}</div>
+          <div className="pt-16 md:pt-24">{children}</div>
           <Footer />
           {/* </AuthProviderWrapper> */}
           {/* </QueryClientWrapper> */}

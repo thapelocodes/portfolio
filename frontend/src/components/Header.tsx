@@ -214,7 +214,7 @@ const Header = () => {
               onClick={handleClick}
               className="m-3 p-3 absolute mt-14 right-1 rounded-lg bg-gradient-to-br from-blue-100 via-slate-200 to-zinc-200 dark:from-blue-950 dark:via-slate-900 dark:to-zinc-950 border border-transparent shadow-md shadow-indigo-300 dark:shadow-indigo-950 animate-slide-in-from-top"
             >
-              <nav className="flex flex-col h-52 w-24 justify-between">
+              <nav className="flex flex-col h-72 w-32 justify-between">
                 <button className="my-1 transform transition-transform duration-200 hover:scale-125">
                   <Link
                     href="/"

@@ -20,14 +20,13 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <main className="p-8 pt-0 w-9/12 mx-auto max-w-xl">
-        <h1 className="text-3xl text-shadow text-primary">Projects</h1>
-        <div className="my-5">
-          {projects.length > 0 ? (
-            projects.map((project: any) => (
+    <main className="pt-0 px-4 mx-auto min-h-screen">
+      <h1 className="text-3xl text-shadow text-primary">Projects</h1>
+      <div className="my-5 max-w-sm mx-auto md:max-w-max md:grid grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.length > 0 ? (
+          projects.map((project: any) => (
+            <div key={project.id} className="max-w-sm mt-4">
               <ProjectCard
-                key={project.id}
                 id={project._id}
                 name={project.name}
                 description={project.description}
@@ -35,13 +34,13 @@ const Projects = () => {
                 liveLink={project.liveLink}
                 githubLink={project.githubLink}
               />
-            ))
-          ) : (
-            <p>No projects available.</p>
-          )}
-        </div>
-      </main>
-    </div>
+            </div>
+          ))
+        ) : (
+          <p>No projects available.</p>
+        )}
+      </div>
+    </main>
   );
 };
 

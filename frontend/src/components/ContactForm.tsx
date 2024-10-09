@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import api from "@/utils/api";
 
 const ContactForm = () => {
@@ -8,6 +9,33 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
+  const pathname = usePathname();
+  const isContactPage = pathname === "/contact";
+
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Function to check if the element is visible in the viewport
+  const checkIfVisible = () => {
+    if (elementRef.current) {
+      const { top, bottom } = elementRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // If the element is in the viewport
+      if (top < windowHeight - 200 && bottom > 0) {
+        setIsVisible(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkIfVisible);
+    checkIfVisible(); // Initial check on mount
+
+    return () => {
+      window.removeEventListener("scroll", checkIfVisible);
+    };
+  }, []);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -25,8 +53,15 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="md:max-w-screen-lg my-5 shadow-lg dark:shadow-dark mx-auto contact dark:text-white p-2 rounded-xl bg-gradient-to-t from-slate-300 via-zinc-200 to-slate-100 dark:from-slate-950 dark:via-zinc-900 dark:to-slate-900">
-      <h2 className="w-fit mx-auto text-xl p-2 text-shadow text-tertiary">
+    <section
+      ref={elementRef}
+      className={`projects md:max-w-screen-lg my-5 mx-auto p-3 rounded-xl shadow-lg dark:shadow-dark transition-transform duration-500 ${
+        isVisible
+          ? "animate-slideInLeft"
+          : "opacity-0 transform -translate-x-full"
+      }`}
+    >
+      <h2 className="w-fit mx-auto text-2xl p-2 text-shadow text-tertiary">
         Contact
       </h2>
       <form
@@ -66,11 +101,13 @@ const ContactForm = () => {
         </div>
       </form>
       <p className="text-center">{status}</p>
-      <button className="text-tertiary text-sm font-medium shadow w-fit mx-auto p-2 px-4 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-3xl my-1 transform transition-transform duration-200 hover:scale-110">
-        <Link href="/contact" className="">
-          Let&apos;s socialize
-        </Link>
-      </button>
+      {!isContactPage && (
+        <button className="text-tertiary text-sm font-medium shadow w-fit mx-auto p-2 px-4 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-3xl my-1 transform transition-transform duration-200 hover:scale-110">
+          <Link href="/contact" className="">
+            Let&apos;s socialize
+          </Link>
+        </button>
+      )}
     </section>
   );
 };
