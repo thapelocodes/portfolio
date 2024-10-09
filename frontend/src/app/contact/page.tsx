@@ -35,11 +35,13 @@ const Contact = () => {
         Connect with me across multiple platforms as{" "}
         <em className="text-primary">thapelocodes</em>
       </h3>
-      <ul className="text-tertiary w-fit grid grid-cols-2 gap-6 my-12 scrollContainer mx-auto">
+      <ul className="text-tertiary w-fit grid sm:grid-cols-2 gap-6 my-12 scrollContainer mx-auto">
         <li>
           <a
             href="https://linkedin.com/in/thapelocodes"
             className="flex w-44 justify-between"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Image
               src={LinkedInLogoBlack}
@@ -62,6 +64,8 @@ const Contact = () => {
           <a
             href="https://github.com/thapelocodes"
             className="flex w-44 justify-between"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Image
               src={GitHubLogoBlack}
@@ -84,6 +88,8 @@ const Contact = () => {
           <a
             href="https://x.com/thapelocodes"
             className="flex w-44 justify-between"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Image
               src={XLogoBlack}
@@ -106,6 +112,8 @@ const Contact = () => {
           <a
             href="https://instagram.com/thapelocodes"
             className="flex w-44 justify-between"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Image
               src={InstaLogoBlack}
@@ -130,6 +138,8 @@ const Contact = () => {
               <a
                 href="https://linkedin.com/in/thapelocodes"
                 className="flex w-44 justify-between"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={LinkedInLogoBlack}
@@ -152,6 +162,8 @@ const Contact = () => {
               <a
                 href="https://github.com/thapelocodes"
                 className="flex w-44 justify-between"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={GitHubLogoBlack}
@@ -174,6 +186,8 @@ const Contact = () => {
               <a
                 href="https://x.com/thapelocodes"
                 className="flex w-44 justify-between"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={XLogoBlack}
@@ -196,6 +210,8 @@ const Contact = () => {
               <a
                 href="https://instagram.com/thapelocodes"
                 className="flex w-44 justify-between"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={InstaLogoBlack}
