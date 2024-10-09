@@ -6,6 +6,7 @@ import "@/app/globals.css";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const projectsToDisplay = projects.reverse();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -23,8 +24,8 @@ const Projects = () => {
     <main className="pt-0 px-4 mx-auto min-h-screen">
       <h1 className="text-3xl text-shadow text-primary">Projects</h1>
       <div className="my-5 max-w-sm mx-auto md:max-w-max md:grid grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.length > 0 ? (
-          projects.map((project: any) => (
+        {projectsToDisplay.length > 0 ? (
+          projectsToDisplay.map((project: any) => (
             <div key={project.id} className="max-w-sm mt-4">
               <ProjectCard
                 id={project._id}
