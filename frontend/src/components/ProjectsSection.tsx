@@ -59,10 +59,10 @@ const ProjectsSection = () => {
       <h2 className="text-shadow text-tertiary m-2 text-2xl">
         Projects I have worked on
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 w-10/12 md:w-full mx-auto md:gap-4 py-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 md:w-full mx-auto md:gap-4 py-2">
         {projectsToDisplay.length > 0 ? (
           projectsToDisplay.map((project: any) => (
-            <div key={project._id} className="w-full mx-auto">
+            <div key={project._id} className="max-w-sm mx-auto">
               <ProjectCard
                 id={project._id}
                 name={project.name}
