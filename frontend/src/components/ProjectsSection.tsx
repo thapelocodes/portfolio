@@ -7,7 +7,7 @@ import api from "@/utils/api";
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
   const projectsToDisplay =
-    projects.length >= 3 ? projects.reverse().slice(0, 4) : projects.reverse();
+    projects.length >= 3 ? projects.reverse().slice(0, 3) : projects.reverse();
 
   const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
