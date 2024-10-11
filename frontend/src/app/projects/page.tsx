@@ -48,7 +48,7 @@ const Projects = () => {
             </div>
           ))
         ) : (
-          <div className="mx-auto animate-spin">
+          <div className="mx-auto animate-spin col-span-full">
             <Image
               src={LoadingIcon}
               alt="Loading Icon"
