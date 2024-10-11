@@ -27,11 +27,17 @@ const config: Config = {
           from: { transform: "translateX(100%)", opacity: "0" },
           to: { transform: "translateX(0)", opacity: "1" },
         },
+        // loading: {
+        //   from: { "stroke-dasharray": "0, 0", "stroke-dashoffset": "0" },
+        //   to: { "stroke-dasharray": "100, 100", "stroke-dashoffset": "0" },
+        // },
       },
       animation: {
         "slide-in-from-top": "slide-in-from-top 0.3s ease-out",
         slideInLeft: "slideInLeft 1s ease-out forwards",
         slideInRight: "slideInRight 1s ease-out forwards",
+        // loading: "loading 2s ease-in-out forwards",
+        spin: "spin 1s linear infinite",
       },
     },
   },

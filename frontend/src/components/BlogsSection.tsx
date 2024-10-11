@@ -3,6 +3,9 @@ import Link from "next/link";
 import BlogCard from "./BlogCard";
 import { useEffect, useRef, useState } from "react";
 import api from "@/utils/api";
+import Image from "next/image";
+import LoadingIcon from "@/assets/loading-svgrepo-com.svg";
+import LoadingIconWhite from "@/assets/loading-white-svgrepo-com.svg";
 
 const BlogsSection = () => {
   const [blogs, setBlogs] = useState([]);
@@ -11,6 +14,7 @@ const BlogsSection = () => {
 
   const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // Function to check if the element is visible in the viewport
   const checkIfVisible = () => {
@@ -39,6 +43,9 @@ const BlogsSection = () => {
       try {
         const response = await api.get("/blogs");
         console.log("Blogs response: ", response);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
         setBlogs(response.data);
       } catch (err) {
         console.error("Error fetching blogs: ", err);
@@ -59,7 +66,7 @@ const BlogsSection = () => {
     >
       <h2 className="text-shadow text-tertiary text-2xl m-1">Blogs</h2>
       <div className="flex flex-col my-2">
-        {blogsToDisplay.length > 0 ? (
+        {!loading && blogsToDisplay.length > 0 ? (
           blogsToDisplay.map((blog: any) => (
             <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
               <BlogCard
@@ -72,7 +79,22 @@ const BlogsSection = () => {
             </Link>
           ))
         ) : (
-          <p>No blogs available.</p>
+          <div className="mx-auto animate-spin">
+            <Image
+              src={LoadingIcon}
+              alt="Loading Icon"
+              width={50}
+              height={50}
+              className="dark:hidden"
+            />
+            <Image
+              src={LoadingIconWhite}
+              alt="Loading Icon"
+              width={50}
+              height={50}
+              className="hidden dark:block"
+            />
+          </div>
         )}
         {/* <Link href="blogs/blog1">
         <BlogCard

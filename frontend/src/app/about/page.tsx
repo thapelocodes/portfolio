@@ -31,9 +31,13 @@ const About = () => (
         <h1 className="hidden md:block text-3xl text-shadow text-primary">
           About Me
         </h1>
-        <p className="my-3 md:text-justify md:mr-5">
-          I am a self-taught developer based in and I recently obtained my
-          certification from ALX with a plethora of technical and soft skills.
+        <p className="my-3 text-justify mx-6 md:ml-0 md:mr-5">
+          I am a self-taught developer and I recently obtained my certification
+          from ALX with a plethora of technical and soft skills. I have a
+          passion for coding creative user interfaces and solving complex
+          problems. As a full-stack developer and frontend specialist it is
+          guaranteed that adding me to your team will prove to be a valuable
+          investment. See my resume and certification below.
         </p>
         <div className="flex gap-4 w-fit mx-auto md:mx-0">
           <button className="group my-2 p-2 rounded-full bg-gradient-to-br from-indigo-100 via-slate-200 to-zinc-200 dark:from-indigo-900 dark:via-slate-900 dark:hover:via-late-700 dark:to-zinc-900 transform transition-transform duration-200 hover:scale-125 shadow dark:shadow-indigo-800 hover:shadow-md dark:hover:shadow-indigo-900">
