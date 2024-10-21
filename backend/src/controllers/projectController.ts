@@ -36,6 +36,10 @@ export const createProject = async (req: Request, res: Response) => {
 export const getProjects = async (_: Request, res: Response) => {
   try {
     const projects = await Project.find();
+    res.setHeader(
+      "Content-Range",
+      `projects 0-${projects.length}/${projects.length}`
+    );
     res.status(200).json(projects);
   } catch (err) {
     res

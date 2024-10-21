@@ -20,6 +20,7 @@ export const createBlog = async (req: Request, res: Response) => {
 export const getBlogs = async (_: Request, res: Response) => {
   try {
     const blogs = await Blog.find();
+    res.setHeader("Content-Range", `blogs 0-${blogs.length}/${blogs.length}`);
     res.status(200).json(blogs);
   } catch (err) {
     res

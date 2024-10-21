@@ -22,6 +22,7 @@ app.use(
       process.env.FRONTEND_URL_CUSTOM as string,
     ],
     credentials: true,
+    exposedHeaders: ["Content-Range"],
   })
 );
 app.use(express.json());
