@@ -67,6 +67,7 @@ const Header = () => {
             width={500}
             height={500}
             style={{ borderRadius: "50%" }}
+            priority
           />
         </Link>
         <div className="flex flex-col md:flex-row items-center">
