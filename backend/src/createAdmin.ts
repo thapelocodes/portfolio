@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
 import Admin from "./models/Admin";
 import dotenv from "dotenv";
 
@@ -13,8 +12,7 @@ const createAdmin = async () => {
     if (!password) {
       throw new Error("ADMIN_PASSWORD environment variable not set");
     }
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const admin = new Admin({ password: hashedPassword });
+    const admin = new Admin({ password: password });
     await admin.save();
     console.log("Admin created successfully");
   } catch (err) {

@@ -10,11 +10,12 @@ const adminSchema: Schema = new Schema({
 });
 
 adminSchema.pre<IAdmin>("save", async function (next) {
-  const admin = this;
-  if (!admin.isModified("password")) return next();
-  const salt = await bcrypt.genSalt(10);
-  const hash = await bcrypt.hash(admin.password, salt);
-  admin.password = hash;
+  console.log("Before hash:", this.password);
+  if (this.isModified("password")) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+    console.log("After hash:", this.password);
+  }
   next();
 });
 
