@@ -6,10 +6,15 @@ import {
   updateBlog,
   deleteBlog,
 } from "../controllers/blogController";
+import { authenticateAdmin } from "../middleware/authMiddleware";
 
 const router = express.Router();
 
-router.route("/").post(createBlog).get(getBlogs);
-router.route("/:id").get(getBlogById).put(updateBlog).delete(deleteBlog);
+router.route("/").post(authenticateAdmin, createBlog).get(getBlogs);
+router
+  .route("/:id")
+  .get(getBlogById)
+  .put(authenticateAdmin, updateBlog)
+  .delete(authenticateAdmin, deleteBlog);
 
 export default router;

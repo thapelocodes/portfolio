@@ -6,6 +6,7 @@ export const createProject = async (req: Request, res: Response) => {
   const {
     name,
     description,
+    article,
     image,
     githubLink,
     liveLink,
@@ -17,6 +18,7 @@ export const createProject = async (req: Request, res: Response) => {
     const newProject = new Project({
       name,
       description,
+      article,
       image,
       githubLink,
       liveLink,
@@ -40,6 +42,8 @@ export const getProjects = async (_: Request, res: Response) => {
       "Content-Range",
       `projects 0-${projects.length}/${projects.length}`
     );
+    res.setHeader("Access-Control-Expose-Headers", "Content-Range");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(projects);
   } catch (err) {
     res

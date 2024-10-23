@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import blogRoutes from "./routes/blogRoutes";
 import projectRoutes from "./routes/projectRoutes";
 import messageRoutes from "./routes/messageRoutes";
+import adminRoutes from "./routes/adminRoutes";
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(
     exposedHeaders: ["Content-Range"],
   })
 );
+app.options("*", cors());
 app.use(express.json());
 app.get("/", (req: Request, res: Response) => {
   res.send("Backend is running!");
@@ -32,6 +34,7 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/blogs", blogRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/contacts", messageRoutes);
+app.use("/api/admin", adminRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

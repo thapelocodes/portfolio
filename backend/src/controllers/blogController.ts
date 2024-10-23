@@ -21,6 +21,8 @@ export const getBlogs = async (_: Request, res: Response) => {
   try {
     const blogs = await Blog.find();
     res.setHeader("Content-Range", `blogs 0-${blogs.length}/${blogs.length}`);
+    res.setHeader("Access-Control-Expose-Headers", "Content-Range");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json(blogs);
   } catch (err) {
     res
