@@ -63,6 +63,7 @@ const Blogs = () => {
               />
             </div>
           )}
+          {!loading && blogs.length === 0 && <p>No blog posts for now.</p>}
         </div>
       </main>
     </div>

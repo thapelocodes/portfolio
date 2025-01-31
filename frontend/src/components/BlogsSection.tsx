@@ -96,6 +96,9 @@ const BlogsSection = () => {
             />
           </div>
         )}
+        {!loading && blogsToDisplay.length === 0 && (
+          <p>No blog posts for now.</p>
+        )}
         {/* <Link href="blogs/blog1">
         <BlogCard
           title="Blog 1"
