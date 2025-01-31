@@ -33,19 +33,7 @@ const Blogs = () => {
       <main className="min-h-screen w-9/12 mx-auto">
         <h1 className="text-3xl m-2 text-primary text-shadow">Blogs</h1>
         <div className={`my-5 mx-auto ${loading && "w-12"}`}>
-          {!loading && blogs.length > 0 ? (
-            blogs.map((blog: any) => (
-              <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
-                <BlogCard
-                  key={blog._id}
-                  title={blog.title}
-                  content={blog.content}
-                  createdAt={new Date(blog.createdAt).toLocaleDateString()}
-                  updatedAt={new Date(blog.updatedAt).toLocaleDateString()}
-                />
-              </Link>
-            ))
-          ) : (
+          {loading ? (
             <div className="mx-auto animate-spin">
               <Image
                 src={LoadingIcon}
@@ -62,8 +50,21 @@ const Blogs = () => {
                 className="hidden dark:block"
               />
             </div>
+          ) : blogs.length === 0 ? (
+            <p>No blog posts for now.</p>
+          ) : (
+            blogs.map((blog: any) => (
+              <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
+                <BlogCard
+                  key={blog._id}
+                  title={blog.title}
+                  content={blog.content}
+                  createdAt={new Date(blog.createdAt).toLocaleDateString()}
+                  updatedAt={new Date(blog.updatedAt).toLocaleDateString()}
+                />
+              </Link>
+            ))
           )}
-          {!loading && blogs.length === 0 && <p>No blog posts for now.</p>}
         </div>
       </main>
     </div>
