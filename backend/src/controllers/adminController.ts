@@ -5,15 +5,15 @@ import Admin from "../models/Admin";
 
 const generateAccessToken = (id: string) => {
   return jwt.sign({ _id: id }, process.env.JWT_SECRET as string, {
-    expiresIn: "1d",
+    expiresIn: "1h",
   });
 };
 
 export const login = async (req: Request, res: Response) => {
-  const { password } = req.body;
+  const { email, password } = req.body;
 
   try {
-    const admin = await Admin.findOne();
+    const admin = await Admin.findOne({ email: email });
 
     if (admin) {
       const validPassword = await bcrypt.compare(password, admin.password);
