@@ -42,7 +42,7 @@ const About = () => (
         <div className="flex gap-4 w-fit mx-auto md:mx-0">
           <button className="group my-2 p-2 rounded-full bg-gradient-to-br from-indigo-100 via-slate-200 to-zinc-200 dark:from-indigo-900 dark:via-slate-900 dark:hover:via-late-700 dark:to-zinc-900 transform transition-transform duration-200 hover:scale-125 shadow dark:shadow-indigo-800 hover:shadow-md dark:hover:shadow-indigo-900">
             <a
-              href="https://drive.google.com/file/d/1utNUuc9L_ijoXjfyqyMr-yflr80t_v3z/view?usp=sharing"
+              href="https://drive.google.com/file/d/1_AcxiTkjjxHuqUsmirNM4viKe3Vcr8TX/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className=""
@@ -68,7 +68,7 @@ const About = () => (
           </button>
           <button className="group my-2 p-2 rounded-full bg-gradient-to-br from-indigo-100 via-slate-200 to-zinc-200 dark:from-indigo-900 dark:via-slate-900 dark:hover:via-late-700 dark:to-zinc-900 transform transition-transform duration-200 hover:scale-125 shadow dark:shadow-indigo-800 hover:shadow-md dark:hover:shadow-indigo-900">
             <a
-              href="https://drive.google.com/file/d/10qXN1X57JYn9VoVLMsOy2AZFp6K_1duE/view?usp=sharing"
+              href="https://drive.google.com/file/d/12RcucTAqtZldT1NLAPbzxvf_Of-uAizv/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className=""
