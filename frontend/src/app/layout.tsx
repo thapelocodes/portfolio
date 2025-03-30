@@ -20,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`text-secondary antialiased`}>
+      <body
+        className={`text-secondary antialiased text-blue-950 dark:text-slate-200`}
+      >
         <ThemeProvider defaultTheme="system">
           <div className="">
             {/* <QueryClientWrapper> */}
