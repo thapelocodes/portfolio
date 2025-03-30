@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 export const metadata: Metadata = {
   title: "thapelocodes",
@@ -19,15 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`text-secondary antialiased`}>
-        <div className="">
-          {/* <QueryClientWrapper> */}
-          {/* <AuthProviderWrapper> */}
-          <Header />
-          <div className="pt-16 md:pt-24">{children}</div>
-          <Footer />
-          {/* </AuthProviderWrapper> */}
-          {/* </QueryClientWrapper> */}
-        </div>
+        <ThemeProvider defaultTheme="system">
+          <div className="">
+            {/* <QueryClientWrapper> */}
+            {/* <AuthProviderWrapper> */}
+            <ParticlesBackground />
+            <Header />
+            <div className="pt-16 md:pt-24">{children}</div>
+            <Footer />
+            {/* </AuthProviderWrapper> */}
+            {/* </QueryClientWrapper> */}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
