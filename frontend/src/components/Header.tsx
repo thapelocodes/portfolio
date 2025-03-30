@@ -93,7 +93,7 @@ const Header = () => {
     >
       <Link
         href="/"
-        className="w-48 drop-shadow-lg flex items-center justify-between"
+        className="w-48 drop-shadow-lg flex items-center justify-between ml-3"
       >
         <Image
           src="/thapelocodes-logo.png"
