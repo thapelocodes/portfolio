@@ -30,7 +30,7 @@ const ProjectCard = ({
       </button>
     </div>
     <div className="flex w-fit mx-auto py-2">
-      <button className="group text-tertiary text-sm font-medium w-28 my-1 transform transition-transform duration-200 hover:scale-150 rounded-lg">
+      <button className="group text-tertiary text-sm font-medium w-28 my-1 transform transition-transform duration-200 hover:scale-125 rounded-lg">
         <a
           href={liveLink}
           target="_blank"
@@ -52,7 +52,7 @@ const ProjectCard = ({
             className="mx-auto hidden dark:block"
           />
         </a>
-        <div className="text-white text-xs absolute p-2 left-4 rounded bg-gray-500 opacity-0 group-hover:opacity-100">
+        <div className="dark:text-white text-xs absolute p-2 left-4 rounded bg-gray-500 opacity-0 group-hover:opacity-100">
           Live/Demo
         </div>
       </button>
@@ -78,7 +78,7 @@ const ProjectCard = ({
             className="mx-auto hidden dark:block"
           />
         </a>
-        <div className="text-white text-xs absolute p-2 left-6 top-8 rounded bg-gray-500 opacity-0 group-hover:opacity-100">
+        <div className="dark:text-white text-xs absolute p-2 left-6 top-8 rounded bg-gray-500 opacity-0 group-hover:opacity-100">
           GitHub
         </div>
       </button>
