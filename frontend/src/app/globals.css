@@ -131,7 +131,44 @@ header {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 7, 14;
+  --background-end-rgb: 70, 75, 105;
+}
+
+.dark header {
+  background: linear-gradient(
+    to bottom,
+    #012,
+    #123,
+    #234,
+    #345,
+    #345,
+    #234,
+    #123,
+    #012
+  );
+}
+.dark ::-webkit-scrollbar-track {
+  background: darkgrey;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #345;
+  border-radius: 10px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #347;
+  transform: scale(0.5);
+}
+.dark .text-shadow {
+  text-shadow: 5px 5px 2px rgba(255, 255, 255, 0.15);
+}
+.dark .profile {
+  box-shadow: 0 0 10px 5px rgba(100, 106, 210, 0.3);
+}
+
+/* .dark {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 7, 14;
@@ -174,12 +211,12 @@ header {
     box-shadow: 0 0 10px 5px rgba(100, 106, 210, 0.3);
   }
 
-  /* .section {
+ .section {
     background: linear-gradient(
         to bottom right,
         #012,
         rgb(var(--background-start-rgb))
       )
       rgb(var(--background-end-rgb));
-  } */
-}
+  }
+} */
