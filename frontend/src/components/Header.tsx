@@ -13,11 +13,17 @@ import BlogsIconBlack from "@/assets/blog-svgrepo-com.svg";
 import BlogsIconWhite from "@/assets/blog-white-svgrepo-com.svg";
 import ContactIconBlack from "@/assets/contact-mobile-svgrepo-com.svg";
 import ContactIconWhite from "@/assets/contact-mobile-white-svgrepo-com.svg";
+import SunIconBlack from "@/assets/sun-svgrepo-com.svg";
+import SunIconWhite from "@/assets/sun-white-svgrepo-com.svg";
+import MoonIconBlack from "@/assets/moon-svgrepo-com.svg";
+import MoonIconWhite from "@/assets/moon-white-svgrepo-com.svg";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [windowSize, setWindowSize] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
+  const { theme, setTheme } = useTheme();
 
   const handleClick = () => {
     setOpenMenu(!openMenu);
@@ -27,6 +33,10 @@ const Header = () => {
     if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
       setOpenMenu(!openMenu);
     }
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   useEffect(() => {
@@ -60,15 +70,21 @@ const Header = () => {
   return (
     <header className="z-10 dark:text-white py-2 flex fixed w-full shadow-lg">
       <div className="container mx-8 flex justify-between items-center text-tertiary font-medium text-xs sm:text-sm md:text-base">
-        <Link href="/" className="max-w-10 md:max-w-12 drop-shadow-lg">
+        <Link
+          href="/"
+          className="w-48 drop-shadow-lg flex items-center justify-between"
+        >
           <Image
             src="/thapelocodes-logo.png"
             alt="logo"
-            width={500}
-            height={500}
+            width={35}
+            height={35}
             style={{ borderRadius: "50%" }}
             priority
           />
+          <p className="text-primary text-shadow text-center text-xl">
+            thapelo<span className="text-blue-300">codes</span>
+          </p>
         </Link>
         <div className="flex flex-col md:flex-row items-center">
           {windowSize >= 768 && (
@@ -189,26 +205,46 @@ const Header = () => {
               </button>
             </nav>
           )}
-          <button
-            onClick={handleClick}
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 mx-auto hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-400 rounded"
-          >
-            <span
-              className={`block w-9/12 h-0.5 bg-slate-700 dark:bg-slate-400 transform transition duration-200 ease-in-out ${
-                openMenu ? "rotate-45 translate-y-1.5" : ""
-              }`}
-            ></span>
-            <span
-              className={`block w-9/12 h-0.5 bg-slate-700 dark:bg-slate-400 transition duration-200 ease-in-out my-1 ${
-                openMenu ? "opacity-0" : ""
-              }`}
-            ></span>
-            <span
-              className={`block w-9/12 h-0.5 bg-slate-700 dark:bg-slate-400 transform transition duration-200 ease-in-out ${
-                openMenu ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
-            ></span>
-          </button>
+          <div className="flex items-center">
+            <button className="w-8 h-8 mx-auto hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-400 rounded-full">
+              <Image
+                src={theme === "dark" ? MoonIconWhite : MoonIconBlack}
+                alt="Theme Toggle"
+                width={25}
+                height={25}
+                className="dark:hidden cursor-pointer mx-auto"
+                onClick={toggleTheme}
+              />
+              <Image
+                src={theme === "dark" ? SunIconWhite : SunIconBlack}
+                alt="Theme Toggle"
+                width={25}
+                height={25}
+                className="hidden dark:block cursor-pointer mx-auto"
+                onClick={toggleTheme}
+              />
+            </button>
+            <button
+              onClick={handleClick}
+              className="md:hidden flex flex-col justify-center items-center w-8 h-8 mx-auto hover:shadow hover:shadow-slate-700 dark:hover:shadow-slate-400 rounded"
+            >
+              <span
+                className={`block w-9/12 h-0.5 bg-slate-700 dark:bg-slate-400 transform transition duration-200 ease-in-out ${
+                  openMenu ? "rotate-45 translate-y-1.5" : ""
+                }`}
+              ></span>
+              <span
+                className={`block w-9/12 h-0.5 bg-slate-700 dark:bg-slate-400 transition duration-200 ease-in-out my-1 ${
+                  openMenu ? "opacity-0" : ""
+                }`}
+              ></span>
+              <span
+                className={`block w-9/12 h-0.5 bg-slate-700 dark:bg-slate-400 transform transition duration-200 ease-in-out ${
+                  openMenu ? "-rotate-45 -translate-y-1.5" : ""
+                }`}
+              ></span>
+            </button>
+          </div>
           {openMenu && windowSize < 768 && (
             <div
               ref={menuRef}
