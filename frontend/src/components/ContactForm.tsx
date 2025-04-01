@@ -55,7 +55,7 @@ const ContactForm = () => {
   return (
     <section
       ref={elementRef}
-      className={`projects md:max-w-screen-lg my-5 mx-auto p-3 rounded-xl shadow-lg dark:shadow-dark transition-transform duration-500 ${
+      className={`projects md:max-w-screen-lg my-5 mx-auto p-3 pt-20 transition-transform duration-500 ${
         isVisible
           ? "animate-slideInLeft"
           : "opacity-0 transform -translate-x-full"
@@ -66,7 +66,7 @@ const ContactForm = () => {
         Contact
       </h2>
       <form
-        className="w-9/12 mx-auto md:max-w-screen-sm flex items-center"
+        className="w-9/12 mx-auto py-8 md:max-w-screen-sm flex items-center"
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col w-full mx-auto mx-auto">
@@ -95,7 +95,7 @@ const ContactForm = () => {
           ></textarea>
           <button
             type="submit"
-            className="text-tertiary text-sm font-medium shadow mx-auto py-1 my-2 rounded-2xl w-20 bg-gradient-to-tl from-indigo-500 to-slate-300 dark:from-indigo-900 dark:to-slate-950 dark:hover:from-indigo-700 dark:hover:to-slate-900 dark:text-white transform transition-transform duration-200 hover:scale-110"
+            className="text-tertiary text-sm font-medium shadow w-full sm:w-7/12 md:5/12 mx-auto py-1 my-2 rounded-2xl w-20 bg-gradient-to-tl from-indigo-500 to-slate-300 dark:from-indigo-900 dark:to-slate-950 dark:hover:from-indigo-700 dark:hover:to-slate-900 dark:text-white transform transition-transform duration-200 hover:scale-110"
           >
             Send
           </button>
@@ -103,7 +103,7 @@ const ContactForm = () => {
       </form>
       <p className="text-center">{status}</p>
       {!isContactPage && (
-        <button className="text-tertiary text-sm font-medium shadow w-fit mx-auto p-2 px-4 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-3xl my-1 transform transition-transform duration-200 hover:scale-110">
+        <button className="text-tertiary text-sm font-medium shadow w-7/12 md:5/12 mx-auto p-2 px-4 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-3xl my-1 transform transition-transform duration-200 hover:scale-110">
           <Link href="/contact" className="">
             Let&apos;s socialize
           </Link>
