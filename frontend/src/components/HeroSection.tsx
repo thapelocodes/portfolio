@@ -100,7 +100,7 @@ const HeroSection = () => {
 
             <div className="animate-float opacity-80">
               <div className="bg-card border border-tech-purple/30 p-4 rounded-lg shadow-lg bg-background/80 backdrop-blur-md">
-                <code className="text-sm text-tech-blue">
+                <code className="text-sm dark:text-tech-blue text-tech-darkBlue">
                   <pre className="overflow-x-auto">
                     {`function optimize() {
   const experience = "seamless";
