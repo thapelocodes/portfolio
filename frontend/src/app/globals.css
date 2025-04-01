@@ -4,14 +4,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  text-align: center;
-  --primary-font-family: "Fira Code", monospace;
-  --secondary-font-family: "Roboto", sans-serif;
-  --tertiary-font-family: "Montserrat", sans-serif;
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    text-align: center;
+    --primary-font-family: "Fira Code", monospace;
+    --secondary-font-family: "Roboto", sans-serif;
+    --tertiary-font-family: "Montserrat", sans-serif;
+
+    --background: 217 33% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 252 86% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 216, 27%, 90%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 215 100% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 224 76.3% 48%;
+
+    --radius: 0.5rem;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 252 86% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 231, 49%, 21%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16.3% 46.9%;
+
+    --accent: 215 100% 60%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 224 76.3% 48%;
+  }
 }
 
 body {
@@ -26,20 +88,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-/* header {
-  background: linear-gradient(
-    to bottom,
-    #89a,
-    #abc,
-    #bcd,
-    #cde,
-    #cde,
-    #bcd,
-    #abc,
-    #89a
-  );
-} */
 
 .text-shadow {
   text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.25);
@@ -81,20 +129,29 @@ body {
   }
 }
 
+@layer components {
+  .tech-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-tech-purple/20 hover:-translate-y-1;
+  }
+
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 before:absolute before:w-0 before:h-0.5 before:bottom-0 before:left-0 before:bg-tech-purple before:transition-all before:duration-300 hover:before:w-full;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-
-/*section {
-  background: linear-gradient(
-      to bottom right,
-      #789,
-      rgb(var(--background-start-rgb))
-    )
-    rgb(var(--background-end-rgb));
-}*/
 
 @media screen and (min-width: 640px) {
   ::-webkit-scrollbar {
@@ -136,20 +193,6 @@ body {
   --background-start-rgb: 0, 7, 14;
   --background-end-rgb: 70, 75, 105;
 }
-
-/* .dark header {
-  background: linear-gradient(
-    to bottom,
-    #012,
-    #123,
-    #234,
-    #345,
-    #345,
-    #234,
-    #123,
-    #012
-  );
-} */
 .dark ::-webkit-scrollbar-track {
   background: darkgrey;
 }
@@ -167,56 +210,3 @@ body {
 .dark .profile {
   box-shadow: 0 0 10px 5px rgba(100, 106, 210, 0.3);
 }
-
-/* .dark {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 7, 14;
-    --background-end-rgb: 70, 75, 105;
-  }
-
-  header {
-    background: linear-gradient(
-      to bottom,
-      #012,
-      #123,
-      #234,
-      #345,
-      #345,
-      #234,
-      #123,
-      #012
-    );
-  }
-
-  ::-webkit-scrollbar-track {
-    background: darkgrey;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #345;
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #347;
-    transform: scale(0.5);
-  }
-
-  .text-shadow {
-    text-shadow: 5px 5px 2px rgba(255, 255, 255, 0.15);
-  }
-
-  .profile {
-    box-shadow: 0 0 10px 5px rgba(100, 106, 210, 0.3);
-  }
-
- .section {
-    background: linear-gradient(
-        to bottom right,
-        #012,
-        rgb(var(--background-start-rgb))
-      )
-      rgb(var(--background-end-rgb));
-  }
-} */
