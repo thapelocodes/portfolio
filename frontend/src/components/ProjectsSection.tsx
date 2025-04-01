@@ -62,6 +62,7 @@ const ProjectsSection = () => {
           ? "animate-slideInLeft"
           : "opacity-0 transform -translate-x-full"
       }`}
+      id="projects"
     >
       <h2 className="text-shadow text-tertiary m-2 text-2xl">
         Projects I have worked on

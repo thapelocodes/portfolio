@@ -63,6 +63,7 @@ const BlogsSection = () => {
           ? "animate-slidInLeft"
           : "opacity-0 transform translate-x-full"
       }`}
+      id="blog"
     >
       <h2 className="text-shadow text-tertiary text-2xl m-1">Blogs</h2>
       <div className="flex flex-col my-2">

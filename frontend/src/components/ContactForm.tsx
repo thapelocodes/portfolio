@@ -60,6 +60,7 @@ const ContactForm = () => {
           ? "animate-slideInLeft"
           : "opacity-0 transform -translate-x-full"
       }`}
+      id="contact"
     >
       <h2 className="w-fit mx-auto text-2xl p-2 text-shadow text-tertiary">
         Contact
