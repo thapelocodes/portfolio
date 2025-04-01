@@ -57,7 +57,7 @@ const ProjectsSection = () => {
   return (
     <section
       ref={elementRef}
-      className={`projects md:max-w-screen-lg my-5 mx-auto p-3 rounded-xl shadow-lg dark:shadow-dark transition-transform duration-500 ${
+      className={`projects md:max-w-screen-lg my-5 mx-auto p-3 pt-20 transition-transform duration-500 ${
         isVisible
           ? "animate-slideInLeft"
           : "opacity-0 transform -translate-x-full"
@@ -65,10 +65,10 @@ const ProjectsSection = () => {
       id="projects"
     >
       <h2 className="text-shadow text-tertiary m-2 text-2xl">
-        Projects I have worked on
+        Featured Projects
       </h2>
       <div
-        className={`grid md:grid-cols-2 lg:grid-cols-3 mx-auto md:gap-4 py-2`}
+        className={`grid md:grid-cols-2 lg:grid-cols-3 mx-auto md:gap-4 py-8`}
       >
         {!loading && projectsToDisplay.length > 0 ? (
           projectsToDisplay.map((project: any) => (
@@ -102,7 +102,7 @@ const ProjectsSection = () => {
           </div>
         )}
       </div>
-      <button className="text-tertiary text-sm font-medium w-fit mx-auto p-2 px-4 shadow bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
+      <button className="text-tertiary text-sm font-medium w-full sm:w-7/12 md:w-5/12 mx-auto p-2 px-4 shadow bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
         <Link href="/projects">See more projects</Link>
       </button>
     </section>
