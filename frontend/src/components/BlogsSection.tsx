@@ -58,14 +58,14 @@ const BlogsSection = () => {
   return (
     <section
       ref={elementRef}
-      className={`blogs dark:shadow-dark rounded-2xl md:max-w-screen-lg p-3 w-full my-5 mx-auto text-center shadow-lg transition-transform duration-500 ${
+      className={`blogs rounded-2xl md:max-w-screen-lg p-3 pt-20 w-full my-5 mx-auto text-center transition-transform duration-500 ${
         isVisible
           ? "animate-slidInLeft"
           : "opacity-0 transform translate-x-full"
       }`}
       id="blog"
     >
-      <h2 className="text-shadow text-tertiary text-2xl m-1">Blogs</h2>
+      <h2 className="text-shadow text-tertiary text-2xl m-1">Blog</h2>
       <div className="flex flex-col my-2">
         {loading ? (
           <div className="mx-auto animate-spin">
@@ -97,11 +97,12 @@ const BlogsSection = () => {
                 updatedAt={new Date(blog.updatedAt).toLocaleDateString()}
               />
             </Link>
-          ))
+          )) && (
+            <button className="text-tertiary text-sm font-medium shadow w-fit mt-3 mx-auto py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
+              <Link href="blogs">Explore more blogs</Link>
+            </button>
+          )
         )}
-        <button className="text-tertiary text-sm font-medium shadow w-fit mt-3 mx-auto py-2 px-4 bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
-          <Link href="blogs">Explore more blogs</Link>
-        </button>
       </div>
     </section>
   );
