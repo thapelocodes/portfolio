@@ -1,12 +1,15 @@
 "use client";
 import React from "react";
 import { useTheme } from "./ThemeProvider";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import BackIconBlack from "@/assets/back-svgrepo-com.svg";
 import BackIconWhite from "@/assets/back-white-svgrepo-com.svg";
 
 const Footer = () => {
   const { theme } = useTheme();
+  const pathname = usePathname();
 
   const srollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   const scrollToSection = (sectionId: string) => {
@@ -15,14 +18,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-slate-400 dark:bg-slate-900 flex items-centerj text-left">
+    <footer className="bg-slate-300 dark:bg-slate-900 flex items-centerj text-left">
       <div className="tech-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pb-10 border-b border-border">
           <div>
-            <h3 className="text-primary text-shadow text-xl font-bold my-4">
-              <span className="text-sky-600 dark:text-sky-500">thapelo</span>
-              codes
-            </h3>
+            <Link href="/" className="flex items-center gap-2 my-4">
+              <Image
+                src="/thapelocodes-logo.png"
+                alt="logo"
+                width={35}
+                height={35}
+                style={{ borderRadius: "50%" }}
+                priority
+              />
+              <h3 className="text-primary text-shadow text-xl font-bold">
+                <span className="text-sky-600 dark:text-sky-500">thapelo</span>
+                codes
+              </h3>
+            </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">
               Building scalable digital experiences that drive growth and
               generate leads.
@@ -80,36 +93,30 @@ const Footer = () => {
             <h4 className="font-semibold my-4">Quick Links</h4>
             <nav className="space-y-3">
               <a
-                href="#about"
+                href={pathname === "/" ? "#about" : "/about"}
                 className="block text-muted-foreground hover:text-tech-purple transition-colors"
                 onClick={() => scrollToSection("about")}
               >
                 About
               </a>
               <a
-                href="#projects"
+                href={pathname === "/" ? "#projects" : "/projects"}
                 className="block text-muted-foreground hover:text-tech-purple transition-colors"
                 onClick={() => scrollToSection("projects")}
               >
                 Projects
               </a>
               <a
-                href="#blog"
+                href={pathname === "/" ? "#blog" : "/blogs"}
                 className="block text-muted-foreground hover:text-tech-purple transition-colors"
                 onClick={() => scrollToSection("blog")}
               >
                 Blog
               </a>
               <a
-                href="#contact"
+                href={pathname === "/" ? "#contact" : "/contact"}
                 className="block text-muted-foreground hover:text-tech-purple transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactSection = document.getElementById("contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
+                onClick={() => scrollToSection("contact")}
               >
                 Contact
               </a>
