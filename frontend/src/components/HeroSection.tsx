@@ -55,9 +55,8 @@ const HeroSection = () => {
                 isLoaded && "opacity-100"
               }`}
             >
-              Software Engineer & Frontend Developer specializing in
-              performance-driven web applications that expand your digital
-              reach, generate leads and increase conversions.
+              Software Engineer & Frontend Developer specializing in fast,
+              eye-catching web applications that grow your digital reach.
             </p>
             <div
               className={`flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start opacity-0 transition-all duration-1000 delay-500 ${
@@ -68,7 +67,7 @@ const HeroSection = () => {
                 onClick={handleScrollToContact}
                 className="bg-tech-purple hover:bg-tech-purple/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-tech-purple/20"
               >
-                Let&apos;s Build Something Great
+                Let&apos;s Build Something Awesome!
               </button>
               <button
                 onClick={handleScrollToProjects}
