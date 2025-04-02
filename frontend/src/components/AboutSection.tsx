@@ -21,15 +21,15 @@ const AboutSection = () => {
     >
       <h2 className="lg:hidden text-shadow text-tertiary text-2xl">About Me</h2>
       <div className="lg:flex flex-row-reverse items-center">
-        <div className="profile sm:max-w-xs sm:ma mx-auto my-10 self-end">
-          <Image
+        <div className="profile max-w-xs lg:w-80 mx-auto my-10 self-end">
+          {/* <Image
             src="/M-9.jpg"
             alt="Thapelo Michael Moumakoe"
             width={2880}
             height={3600}
             placeholder="blur"
             blurDataURL="/M-9.jpg"
-          />
+          /> */}
         </div>
         <div className="flex flex-col lg:items-start lg:max-w-xs mx-auto lg:self-center">
           <h2 className="hidden lg:block text-shadow text-tertiary text-2xl mb-5">

@@ -16,16 +16,16 @@ const About = () => (
     <div className="md:flex flex-row-reverse items-center">
       <div
         // style={imageStyle}
-        className="profile sm:max-w-xs mx-auto my-8 self-end"
+        className="profile max-w-xs mx-auto my-8 self-end"
       >
-        <Image
+        {/* <Image
           src="/M-9.jpg"
           alt="Thapelo M. Moumakoe"
           width={2880}
           height={3600}
           placeholder="blur"
           blurDataURL="/M-9.jpg"
-        />
+        /> */}
       </div>
       <div className="md:flex flex-col md:items-start md:max-w-xs mx-auto md:self-center p-3">
         <h1 className="hidden md:block text-3xl text-shadow text-primary">
