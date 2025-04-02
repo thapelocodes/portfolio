@@ -68,7 +68,6 @@ const Header = () => {
 
       return () => {
         window.removeEventListener("click", handleClickOutside);
-        console.log("Is menu open?", `${openMenu ? "Yes" : "No"}`);
       };
     }
   });
