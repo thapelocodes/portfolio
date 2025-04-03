@@ -41,6 +41,7 @@ const Projects = () => {
                 id={project._id}
                 name={project.name}
                 description={project.description}
+                image={project.image}
                 article={project.article}
                 liveLink={project.liveLink}
                 githubLink={project.githubLink}
