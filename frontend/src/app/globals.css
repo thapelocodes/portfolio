@@ -44,7 +44,9 @@
 
     --radius: 0.5rem;
     --bg-image: url("/M-9.jpg");
+
     --bg-image-overlay: #0f172a38;
+    --bg-image-overlay-2: #0f152bf8;
   }
 
   .light {
@@ -75,6 +77,9 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 224 76.3% 48%;
+
+    --bg-image-overlay: #eeeeee38;
+    --bg-image-overlay-2: #eeeeee;
   }
 }
 
@@ -101,7 +106,6 @@ body {
   border-radius: 100% 65% 65% 100% / 60% 60% 100% 100%;
   aspect-ratio: 1 / 1.25;
   box-shadow: 0 0 10px 5px rgba(0, 0, 80, 0.3);
-  background-color: var(--bg-image-overlay);
   background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
@@ -216,4 +220,14 @@ body {
 .dark .profile {
   box-shadow: 0 0 10px 5px rgba(100, 106, 210, 0.3);
   background-blend-mode: overlay;
+}
+
+.project-card {
+  background-color: var(--bg-image-overlay);
+  background-blend-mode: overlay;
+}
+
+.project-card:hover,
+.project-card:focus {
+  background-color: var(--bg-image-overlay-2);
 }
