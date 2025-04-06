@@ -1,15 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { useTheme } from "./ThemeProvider";
+import { useTheme } from "./ThemeProvider";
 import Link from "next/link";
 import Image from "next/image";
 import Globe from "@/assets/world-svgrepo-com.svg";
 import BackIconLight from "@/assets/back-svgrepo-com.svg";
-// import BackIconDark from "@/assets/back-white-svgrepo-com.svg";
+import BackIconDark from "@/assets/back-white-svgrepo-com.svg";
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  // const { theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setIsLoaded(true);
@@ -120,7 +120,7 @@ const HeroSection = () => {
             className=""
           >
             <Image
-              src={BackIconLight}
+              src={theme == "dark" ? BackIconDark : BackIconLight}
               alt="Scroll to about section"
               width={40}
               height={40}
