@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           <div className="space-y-6 text-center lg:text-left">
             <h1
-              className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-tertiary opacity-0 transition-all duration-1000 ${
+              className={`text-3xl md:text-4xl lg:text-5xl font-bold text-tertiary opacity-0 transition-all duration-1000 ${
                 isLoaded && "opacity-100"
               }`}
             >
