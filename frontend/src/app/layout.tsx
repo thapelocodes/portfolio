@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`text-secondary antialiased text-blue-950 dark:text-slate-200`}
       >
-        <ThemeProvider defaultTheme="system">
+        <ThemeProvider defaultTheme="dark">
           <div className="">
             {/* <QueryClientWrapper> */}
             {/* <AuthProviderWrapper> */}
