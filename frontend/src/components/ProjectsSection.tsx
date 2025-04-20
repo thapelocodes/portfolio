@@ -103,7 +103,7 @@ const ProjectsSection = () => {
           </div>
         )}
       </div>
-      <button className="text-tertiary text-sm font-medium w-full sm:w-7/12 md:w-5/12 mx-auto p-2 px-4 shadow bg-gradient-to-tl from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-950 dark:hover:from-blue-800 rounded-3xl transform transition-transform duration-200 hover:scale-110">
+      <button className="text-tertiary text-sm font-medium w-full sm:w-7/12 md:w-5/12 mx-auto p-2 px-4 shadow border border-tech-purple hover:bg-tech-purple/10 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300">
         <Link href="/projects">See more projects</Link>
       </button>
     </section>

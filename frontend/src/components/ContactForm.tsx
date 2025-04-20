@@ -55,7 +55,7 @@ const ContactForm = () => {
   return (
     <section
       ref={elementRef}
-      className={`projects md:max-w-screen-lg my-5 mx-auto p-3 pt-20 transition-transform duration-500 ${
+      className={`projects w-full md:max-w-screen-lg my-5 mx-auto md:p-3 pt-20 transition-transform duration-500 ${
         isVisible
           ? "animate-slideInLeft"
           : "opacity-0 transform -translate-x-full"
@@ -95,7 +95,7 @@ const ContactForm = () => {
           ></textarea>
           <button
             type="submit"
-            className="text-tertiary text-sm font-medium shadow w-full sm:w-7/12 md:5/12 mx-auto py-1 my-2 rounded-2xl w-20 bg-gradient-to-tl from-indigo-500 to-slate-300 dark:from-indigo-900 dark:to-slate-950 dark:hover:from-indigo-700 dark:hover:to-slate-900 dark:text-white transform transition-transform duration-200 hover:scale-110"
+            className="mt-6 text-tertiary bg-tech-blue hover:bg-tech-blue/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-tech-blue/20"
           >
             Send
           </button>
@@ -103,7 +103,7 @@ const ContactForm = () => {
       </form>
       <p className="text-center">{status}</p>
       {!isContactPage && (
-        <button className="text-tertiary text-sm font-medium shadow w-7/12 md:5/12 mx-auto p-2 px-4 bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-3xl my-1 transform transition-transform duration-200 hover:scale-110">
+        <button className="text-tertiary text-sm font-medium shadow w-7/12 md:5/12 mx-auto p-2 px-4 rounded-3xl my-1 border border-tech-blue hover:bg-tech-blue/10 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300">
           <Link href="/contact" className="">
             Let&apos;s socialize
           </Link>

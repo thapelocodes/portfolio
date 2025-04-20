@@ -40,7 +40,7 @@ ProjectCardProps) => (
     <div className="opacity-0 group-hover:opacity-100 group-focus:opacity-100 transform transition-all duration-500">
       <div className="pb-2">
         <p className="text-secondary line-clamp-3">{description}</p>
-        <button className="text-tertiary text-sm font-medium w-10/12 sm:w-7/12 mt-4 transform transition-transform duration-200 hover:scale-110 bg-gradient-to-tl dark:from-cyan-950 dark:to-slate-950 dark:hover:from-cyan-800 p-2 rounded-lg shadow-md">
+        <button className="text-tertiary text-sm font-medium w-10/12 sm:w-7/12 mt-4 bg-tech-blue hover:bg-tech-blue/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-tech-blue/20">
           <Link href={`/projects/${id}`}>Read more</Link>
         </button>
       </div>

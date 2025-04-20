@@ -51,7 +51,7 @@ const HeroSection = () => {
               that Drive Growth.
             </h1>
             <p
-              className={`text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 transition-all duration-1000 delay-300 ${
+              className={`text-sm md:text-md lg:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 transition-all duration-1000 delay-300 ${
                 isLoaded && "opacity-100"
               }`}
             >
@@ -65,13 +65,13 @@ const HeroSection = () => {
             >
               <button
                 onClick={handleScrollToContact}
-                className="bg-tech-purple hover:bg-tech-purple/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-tech-purple/20"
+                className="text-xs sm:text-sm md:text-md lg:text-lg text-secondary bg-tech-blue hover:bg-tech-blue/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-tech-purple/20"
               >
                 Let&apos;s Build Something Awesome!
               </button>
               <button
                 onClick={handleScrollToProjects}
-                className="border border-tech-purple hover:bg-tech-purple/10 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                className="text-xs sm:text-sm md:text-md lg:text-lg text-secondary border border-tech-blue hover:bg-tech-blue/10 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300"
               >
                 View My Work
               </button>

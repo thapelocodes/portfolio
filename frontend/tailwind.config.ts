@@ -62,7 +62,7 @@ const config: Config = {
         },
         tech: {
           purple: "#6E59F5",
-          blue: "#38BDF8",
+          blue: "#384D90",
           darkBlue: "#0F172A",
           lightBlue: "#64748B",
           white: "#F8FAFC",

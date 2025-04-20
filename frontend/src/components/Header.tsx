@@ -12,6 +12,7 @@ import MenuIconBlack from "@/assets/menu-svgrepo-com.svg";
 import MenuIconWhite from "@/assets/menu-white-svgrepo-com.svg";
 import XIconBlack from "@/assets/cross-svgrepo-com.svg";
 import XIconWhite from "@/assets/cross-white-svgrepo-com.svg";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -19,6 +20,7 @@ const Header = () => {
   const menuRef = useRef<HTMLButtonElement>(null);
   const { theme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,15 +96,25 @@ const Header = () => {
           <span className="text-sky-600 dark:text-sky-500">thapelo</span>codes
         </p>
       </Link>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center text-center">
         {windowSize >= 768 && (
           <nav className="flex justify-between">
-            <button className="m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+            <button
+              className={`m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full ${
+                pathname === "/"
+                  ? "text-blue-700 dark:text-blue-400 after:w-full"
+                  : ""
+              }`}
+            >
               <Link href="/" className="font-semibold pr-2">
                 HOME
               </Link>
             </button>
-            <button className="m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+            <button
+              className={`m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full ${
+                pathname === "/about" ? "text-blue-700 dark:text-blue-400" : ""
+              }`}
+            >
               <Link href="/about" className="font-semibold pr-2">
                 ABOUT
               </Link>
