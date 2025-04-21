@@ -69,23 +69,25 @@ const ContactForm = () => {
         className="w-9/12 mx-auto py-8 md:max-w-screen-sm flex items-center"
         onSubmit={handleSubmit}
       >
-        <div className="flex flex-col w-full mx-auto mx-auto">
-          <input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="shadow-inner shadow-lg my-2 h-10 pl-5 pb-1 rounded-xl hover:border-2 hover:border-slate-800 dark:bg-gray-600 focus:outline-0"
-            required
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="shadow-inner shadow-lg my-2 h-10 pl-5 pb-1 rounded-xl hover:border-2 hover:border-slate-800 dark:bg-gray-600 focus:outline-0"
-            required
-          />
+        <div className="flex flex-col w-full mx-auto">
+          <div className="md:flex md:gap-6 items-center justify-between">
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="shadow-inner shadow-lg my-2 h-10 pl-5 pb-1 rounded-xl hover:border-2 hover:border-slate-800 dark:bg-gray-600 focus:outline-0 md:w-full"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="shadow-inner shadow-lg my-2 h-10 pl-5 pb-1 rounded-xl hover:border-2 hover:border-slate-800 dark:bg-gray-600 focus:outline-0 md:w-full"
+              required
+            />
+          </div>
           <textarea
             placeholder="Message"
             value={message}

@@ -5,11 +5,13 @@ import api from "@/utils/api";
 import Image from "next/image";
 import LoadingIcon from "@/assets/loading-svgrepo-com.svg";
 import LoadingIconWhite from "@/assets/loading-white-svgrepo-com.svg";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const projectsToDisplay = projects.reverse();
   const [loading, setLoading] = useState(true);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -51,18 +53,11 @@ const Projects = () => {
         ) : (
           <div className="mx-auto animate-spin col-span-full">
             <Image
-              src={LoadingIcon}
+              src={theme === "dark" ? LoadingIconWhite : LoadingIcon}
               alt="Loading Icon"
               width={50}
               height={50}
-              className="dark:hidden"
-            />
-            <Image
-              src={LoadingIconWhite}
-              alt="Loading Icon"
-              width={50}
-              height={50}
-              className="hidden dark:block"
+              className=""
             />
           </div>
         )}

@@ -6,10 +6,12 @@ import api from "@/utils/api";
 import Image from "next/image";
 import LoadingIcon from "@/assets/loading-svgrepo-com.svg";
 import LoadingIconWhite from "@/assets/loading-white-svgrepo-com.svg";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -35,18 +37,11 @@ const Blogs = () => {
         {loading ? (
           <div className="mx-auto animate-spin">
             <Image
-              src={LoadingIcon}
+              src={theme === "dark" ? LoadingIconWhite : LoadingIcon}
               alt="Loading Icon"
               width={50}
               height={50}
-              className="dark:hidden"
-            />
-            <Image
-              src={LoadingIconWhite}
-              alt="Loading Icon"
-              width={50}
-              height={50}
-              className="hidden dark:block"
+              className=""
             />
           </div>
         ) : blogs.length === 0 ? (
