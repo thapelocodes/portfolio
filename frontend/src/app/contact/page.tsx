@@ -23,14 +23,13 @@ const Contact = () => {
   }, []);
 
   return (
-    <main className="p-8 pt-20 min-h-screen md:max-w-screen-sm mx-auto overflow-hidden">
+    <main className="px-8 min-h-screen md:max-w-screen-sm mx-auto overflow-hidden">
       <h1 className="text-3xl text-shadow text-primary">Contact</h1>
       <h3 className="my-4">
         Connect with me across multiple platforms as{" "}
         <em className="text-primary">thapelocodes</em>
       </h3>
       <SocialSlider />
-      <div className="p-4"></div>
       <ContactForm />
     </main>
   );

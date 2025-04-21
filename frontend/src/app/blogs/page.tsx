@@ -31,7 +31,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <main className="min-h-screen w-9/12 mx-auto pt-20">
+    <main className="min-h-screen w-9/12 mx-auto">
       <h1 className="text-3xl m-2 text-primary text-shadow">Blogs</h1>
       <div className={`my-5 mx-auto ${loading && "w-12"}`}>
         {loading ? (

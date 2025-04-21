@@ -15,7 +15,7 @@ import { useTheme } from "@/components/ThemeProvider";
 const About = () => {
   const { theme } = useTheme();
   return (
-    <main className="pt-20 min-h-screen text-secondary">
+    <main className="min-h-screen text-secondary">
       <h1 className="md:hidden text-3xl text-shadow text-primary">About Me</h1>
       <div className="md:flex flex-row-reverse items-center">
         <div className="profile max-w-xs md:w-80 mx-auto my-8 self-end"></div>
