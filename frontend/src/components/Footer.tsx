@@ -37,8 +37,11 @@ const Footer = () => {
               </h3>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">
-              Building scalable digital experiences that drive growth and
-              generate leads.
+              Digital experiences that{" "}
+              <span className="gradient-text animate-glow">look good</span> and{" "}
+              <span className="gradient-text animate-glow">
+                feel even better
+              </span>
             </p>
             <div className="flex gap-4">
               <a

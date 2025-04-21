@@ -43,8 +43,8 @@ const ParticlesBackground = () => {
       const particleCount = Math.min(Math.floor(window.innerWidth / 10), 100);
 
       for (let i = 0; i < particleCount; i++) {
-        const primaryColor = theme === "dark" ? "#6e59f5" : "#6e59f5";
-        const secondaryColor = theme === "dark" ? "#38bdf8" : "#38bdf8";
+        const primaryColor = "#384D90";
+        const secondaryColor = "#38bdf8";
 
         particles.push({
           x: Math.random() * canvas!.width,

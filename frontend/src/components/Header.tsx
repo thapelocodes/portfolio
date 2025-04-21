@@ -101,9 +101,8 @@ const Header = () => {
           <nav className="flex justify-between">
             <button
               className={`m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full ${
-                pathname === "/"
-                  ? "text-blue-700 dark:text-blue-400 after:w-full"
-                  : ""
+                pathname === "/" &&
+                "text-blue-700 dark:text-blue-400 after:w-full"
               }`}
             >
               <Link href="/" className="font-semibold pr-2">
@@ -112,24 +111,40 @@ const Header = () => {
             </button>
             <button
               className={`m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full ${
-                pathname === "/about" ? "text-blue-700 dark:text-blue-400" : ""
+                pathname === "/about" &&
+                "text-blue-700 dark:text-blue-400 after:w-full"
               }`}
             >
               <Link href="/about" className="font-semibold pr-2">
                 ABOUT
               </Link>
             </button>
-            <button className="m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+            <button
+              className={`m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full ${
+                pathname === "/projects" &&
+                "text-blue-700 dark:text-blue-400 after:w-full"
+              }`}
+            >
               <Link href="/projects" className="font-semibold pr-2">
                 PROJECTS
               </Link>
             </button>
-            <button className="m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+            <button
+              className={`m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full ${
+                pathname === "/blogs" &&
+                "text-blue-700 dark:text-blue-400 after:w-full"
+              }`}
+            >
               <Link href="/blogs" className="font-semibold pr-2">
                 BLOG
               </Link>
             </button>
-            <button className="m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+            <button
+              className={`m-1 group transform transition-transform duration-200 hover:text-blue-700 dark:hover:text-blue-400 after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-[2px] after:bg-blue-700 dark:after:bg-blue-400 after:transition-all after:duration-300 hover:after:w-full ${
+                pathname === "/contact" &&
+                "text-blue-700 dark:text-blue-400 after:w-full"
+              }`}
+            >
               <Link href="/contact" className="font-semibold">
                 CONTACT
               </Link>

@@ -29,45 +29,43 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div>
-      <main className="min-h-screen w-9/12 mx-auto">
-        <h1 className="text-3xl m-2 text-primary text-shadow">Blogs</h1>
-        <div className={`my-5 mx-auto ${loading && "w-12"}`}>
-          {loading ? (
-            <div className="mx-auto animate-spin">
-              <Image
-                src={LoadingIcon}
-                alt="Loading Icon"
-                width={50}
-                height={50}
-                className="dark:hidden"
+    <main className="min-h-screen w-9/12 mx-auto pt-20">
+      <h1 className="text-3xl m-2 text-primary text-shadow">Blogs</h1>
+      <div className={`my-5 mx-auto ${loading && "w-12"}`}>
+        {loading ? (
+          <div className="mx-auto animate-spin">
+            <Image
+              src={LoadingIcon}
+              alt="Loading Icon"
+              width={50}
+              height={50}
+              className="dark:hidden"
+            />
+            <Image
+              src={LoadingIconWhite}
+              alt="Loading Icon"
+              width={50}
+              height={50}
+              className="hidden dark:block"
+            />
+          </div>
+        ) : blogs.length === 0 ? (
+          <p>No blog posts for now.</p>
+        ) : (
+          blogs.map((blog: any) => (
+            <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
+              <BlogCard
+                key={blog._id}
+                title={blog.title}
+                content={blog.content}
+                createdAt={new Date(blog.createdAt).toLocaleDateString()}
+                updatedAt={new Date(blog.updatedAt).toLocaleDateString()}
               />
-              <Image
-                src={LoadingIconWhite}
-                alt="Loading Icon"
-                width={50}
-                height={50}
-                className="hidden dark:block"
-              />
-            </div>
-          ) : blogs.length === 0 ? (
-            <p>No blog posts for now.</p>
-          ) : (
-            blogs.map((blog: any) => (
-              <Link key={blog._id} href={`/blogs/${blog._id}`} passHref>
-                <BlogCard
-                  key={blog._id}
-                  title={blog.title}
-                  content={blog.content}
-                  createdAt={new Date(blog.createdAt).toLocaleDateString()}
-                  updatedAt={new Date(blog.updatedAt).toLocaleDateString()}
-                />
-              </Link>
-            ))
-          )}
-        </div>
-      </main>
-    </div>
+            </Link>
+          ))
+        )}
+      </div>
+    </main>
   );
 };
 

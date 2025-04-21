@@ -27,7 +27,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <main className="pt-0 px-4 mx-auto min-h-screen">
+    <main className="pt-20 px-4 mx-auto min-h-screen">
       <h1 className="text-3xl text-shadow text-primary">Projects</h1>
       <div
         className={`my-5 max-w-sm mx-auto md:max-w-max md:grid grid-cols-2 lg:grid-cols-3 gap-4 ${

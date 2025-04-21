@@ -103,7 +103,7 @@ const ContactForm = () => {
       </form>
       <p className="text-center">{status}</p>
       {!isContactPage && (
-        <button className="text-tertiary text-sm font-medium shadow w-7/12 md:5/12 mx-auto p-2 px-4 rounded-3xl my-1 border border-tech-blue hover:bg-tech-blue/10 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300">
+        <button className="text-tertiary text-sm w-full sm:w-7/12 mx-auto lg:mx-0 font-medium py-2 shadow border border-tech-blue hover:bg-tech-blue/10 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300">
           <Link href="/contact" className="">
             Let&apos;s socialize
           </Link>

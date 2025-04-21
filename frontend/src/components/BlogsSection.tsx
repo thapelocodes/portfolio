@@ -6,6 +6,7 @@ import api from "@/utils/api";
 import Image from "next/image";
 import LoadingIcon from "@/assets/loading-svgrepo-com.svg";
 import LoadingIconWhite from "@/assets/loading-white-svgrepo-com.svg";
+import { useTheme } from "./ThemeProvider";
 
 const BlogsSection = () => {
   const [blogs, setBlogs] = useState([]);
@@ -15,6 +16,7 @@ const BlogsSection = () => {
   const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(true);
+  const { theme } = useTheme();
 
   // Function to check if the element is visible in the viewport
   const checkIfVisible = () => {
@@ -70,18 +72,11 @@ const BlogsSection = () => {
         {loading ? (
           <div className="mx-auto animate-spin">
             <Image
-              src={LoadingIcon}
+              src={theme === "dark" ? LoadingIconWhite : LoadingIcon}
               alt="Loading Icon"
               width={50}
               height={50}
-              className="dark:hidden"
-            />
-            <Image
-              src={LoadingIconWhite}
-              alt="Loading Icon"
-              width={50}
-              height={50}
-              className="hidden dark:block"
+              className=""
             />
           </div>
         ) : blogsToDisplay.length === 0 ? (

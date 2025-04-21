@@ -9,7 +9,7 @@ import BackIconDark from "@/assets/back-white-svgrepo-com.svg";
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   useEffect(() => {
     setIsLoaded(true);
@@ -43,12 +43,11 @@ const HeroSection = () => {
                 isLoaded && "opacity-100"
               }`}
             >
-              {/* Let&apos;s grow your online presence and user engagement! */}
-              Building{" "}
+              Digital Experiences that{" "}
+              <span className="gradient-text animate-glow">Look Good</span> and{" "}
               <span className="gradient-text animate-glow">
-                Scalable Digital Experiences
-              </span>{" "}
-              that Drive Growth.
+                Feel Even Better
+              </span>
             </h1>
             <p
               className={`text-sm md:text-md lg:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 transition-all duration-1000 delay-300 ${
