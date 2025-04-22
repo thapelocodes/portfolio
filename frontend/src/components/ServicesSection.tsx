@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+// import div from "next/div";
 import { useEffect, useState } from "react";
 
 const ServicesSection = () => {
@@ -23,81 +23,62 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section className="services w-full rounded-2xl my-2 md:max-w-screen-sm mx-auto py-2 px-3 overflow-hidden">
-      <h2 className="text-xl m-2">Services & Skills</h2>
-      <div className="flex flex-col md:flex-row justify-between-2 md:whitespace-nowrap scrollContainer">
-        <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-          <Link href="/services/web-dev" className="">
-            Web Development
-          </Link>
+    <section className="services w-full rounded-2xl my-2 md:max-w-screen-sm mx-auto py-8 px-3 overflow-hidden">
+      <h2 className="text-shadow text-tertiary text-2xl mb-5">
+        Services & Skills
+      </h2>
+      <ul className="flex flex-col md:flex-row md:whitespace-nowrap sliderContainer gap-4">
+        <li className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+          Web Development
+        </li>
+        <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+          App Development
         </div>
-        <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-          <Link href="/services/app-dev" className="">
-            App Development
-          </Link>
+        <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+          Frontend Development
         </div>
-        <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-          <Link href="/services/frontend" className="">
-            Frontend Development
-          </Link>
+        <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+          API Development
         </div>
-        <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-          <Link href="/services/api-dev" className="">
-            API Development and Integration
-          </Link>
+        <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+          API Integration
         </div>
-        <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-          <Link href="/services/seo" className="">
-            Technical SEO
-          </Link>
+        <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+          Technical SEO
         </div>
-        <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-          <Link href="/services/ui-ux" className="">
-            UI/UX Design & Development
-          </Link>
+        <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+          UI/UX Design
         </div>
 
         {
           /* Duplicate for seamless scrolling */
           windowSize >= 768 && (
             <>
-              <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-                <Link href="/services/web-dev" className="">
-                  Web Development
-                </Link>
+              <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+                Web Development
               </div>
-              <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-                <Link href="/services/app-dev" className="">
-                  App Development
-                </Link>
+              <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+                App Development
               </div>
-              <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-                <Link href="/services/frontend" className="">
-                  Frontend Development
-                </Link>
+              <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+                Frontend Development
               </div>
-              <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-                <Link href="/services/api-dev" className="">
-                  API Development and Integration
-                </Link>
+              <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+                API Development
               </div>
-              <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-                <Link href="/services/seo" className="">
-                  Technical SEO
-                </Link>
+              <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+                API Integration
               </div>
-              <div className="w-fit my-1 mx-auto md:mx-1 rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 p-1 transform transition-transform duration-300 hover:scale-110">
-                <Link href="/services/ui-ux" className="">
-                  UI/UX Design & Development
-                </Link>
+              <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+                Technical SEO
+              </div>
+              <div className="w-full sm:w-3/4 my-1 mx-auto rounded-xl bg-gradient-to-tl from-slate-500 dark:from-slate-700 py-4 px-8 transform transition-transform duration-300 hover:scale-110">
+                UI/UX Design
               </div>
             </>
           )
         }
-      </div>
-      <div className="w-fit mx-auto bg-gradient-to-br from-blue-200 to-slate-500 dark:from-blue-950 dark:to-slate-900 dark:hover:from-blue-900 dark:hover:to-slate-800 rounded-xl my-1 py-2 px-4 transform transition-transform duration-300 hover:scale-110">
-        <Link href="/services">See more services</Link>
-      </div>
+      </ul>
     </section>
   );
 };

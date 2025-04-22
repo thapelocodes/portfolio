@@ -175,12 +175,26 @@ body {
     animation: scrollLeft 8s linear infinite;
   }
 
+  .sliderContainer {
+    display: flex;
+    animation: slideLeft 8s linear infinite;
+  }
+
   @keyframes scrollLeft {
     0% {
       transform: translateX(0);
     }
     100% {
       transform: translateX(-50.8%);
+    }
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-227%);
     }
   }
 
@@ -193,7 +207,8 @@ body {
     border-radius: 10px;
   }
 
-  .scrollContainer:hover {
+  .scrollContainer:hover,
+  .sliderContainer:hover {
     animation-play-state: paused;
   }
 }
