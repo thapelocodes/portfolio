@@ -64,7 +64,7 @@ const config: Config = {
           purple: "#6E59F5",
           blue: "#384D90",
           darkBlue: "#0F172A",
-          lightBlue: "#64748B",
+          lightBlue: "#2444EB",
           white: "#F8FAFC",
         },
       },

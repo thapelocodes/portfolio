@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "./ThemeProvider";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -10,6 +10,21 @@ import BackIconWhite from "@/assets/back-white-svgrepo-com.svg";
 const Footer = () => {
   const { theme } = useTheme();
   const pathname = usePathname();
+  const [screenWidth, setScreenWidth] = React.useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setScreenWidth(window.innerWidth);
+
+      const handleResize = () => setScreenWidth(window.innerWidth);
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
   const srollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   const scrollToSection = (sectionId: string) => {
@@ -46,13 +61,15 @@ const Footer = () => {
             <div className="flex gap-4">
               <a
                 href="https://github.com/thapelocodes"
-                className="text-muted-foreground hover:text-tech-purple transition-colors"
+                className="text-muted-foreground hover:text-tech-lightBlue transition-colors"
                 aria-label="GitHub"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width={screenWidth < 768 ? "17" : "20"}
+                  height={screenWidth < 768 ? "17" : "20"}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -61,13 +78,13 @@ const Footer = () => {
               </a>
               <a
                 href="https://linkedin.com/in/thapelocodes"
-                className="text-muted-foreground hover:text-tech-purple transition-colors"
+                className="text-muted-foreground hover:text-tech-lightBlue transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width={screenWidth < 768 ? "17" : "20"}
+                  height={screenWidth < 768 ? "17" : "20"}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -76,13 +93,13 @@ const Footer = () => {
               </a>
               <a
                 href="https://x.com/thapelocodes"
-                className="text-muted-foreground hover:text-tech-purple transition-colors"
+                className="text-muted-foreground hover:text-tech-lightBlue transition-colors"
                 aria-label="X (formerly Twitter)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width={screenWidth < 768 ? "17" : "20"}
+                  height={screenWidth < 768 ? "17" : "20"}
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -97,28 +114,28 @@ const Footer = () => {
             <nav className="space-y-3">
               <a
                 href={pathname === "/" ? "#about" : "/about"}
-                className="block text-muted-foreground hover:text-tech-purple transition-colors"
+                className="block text-muted-foreground hover:text-tech-lightBlue transition-colors"
                 onClick={() => scrollToSection("about")}
               >
                 About
               </a>
               <a
                 href={pathname === "/" ? "#projects" : "/projects"}
-                className="block text-muted-foreground hover:text-tech-purple transition-colors"
+                className="block text-muted-foreground hover:text-tech-lightBlue transition-colors"
                 onClick={() => scrollToSection("projects")}
               >
                 Projects
               </a>
               <a
                 href={pathname === "/" ? "#blog" : "/blogs"}
-                className="block text-muted-foreground hover:text-tech-purple transition-colors"
+                className="block text-muted-foreground hover:text-tech-lightBlue transition-colors"
                 onClick={() => scrollToSection("blog")}
               >
                 Blog
               </a>
               <a
                 href={pathname === "/" ? "#contact" : "/contact"}
-                className="block text-muted-foreground hover:text-tech-purple transition-colors"
+                className="block text-muted-foreground hover:text-tech-lightBlue transition-colors"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
@@ -131,7 +148,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} thapelocodes. All rights reserved.
           </p>
           <button
-            className="flex items-center gap-2 w-fit mx-auto md:mx-0 text-secondary text-sm p-2 md:pr-0 my-1 hover:text-tech-purple transition-all duration-300 group"
+            className="flex items-center gap-2 w-fit mx-auto md:mx-0 text-secondary text-sm p-2 md:pr-0 my-1 hover:text-tech-lightBlue transition-all duration-300 group"
             onClick={srollToTop}
           >
             <span>Back to top</span>

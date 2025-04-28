@@ -21,7 +21,7 @@ const ProjectCard = ({
   id,
   name,
   description,
-  // article,
+  article,
   image,
   liveLink,
   githubLink,

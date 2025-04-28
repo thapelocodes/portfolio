@@ -57,7 +57,7 @@ const ProjectsSection = () => {
   return (
     <section
       ref={elementRef}
-      className={`projects md:max-w-screen-lg my-5 mx-auto p-3 pt-20 transition-transform duration-500 ${
+      className={`projects md:max-w-screen-lg my-8 mx-auto py-3 pt-20 transition-transform duration-500 ${
         isVisible
           ? "animate-slideInLeft"
           : "opacity-0 transform -translate-x-full"
@@ -68,7 +68,7 @@ const ProjectsSection = () => {
         Featured Projects
       </h2>
       <div
-        className={`grid md:grid-cols-2 lg:grid-cols-3 mx-auto md:gap-4 py-8`}
+        className={`grid md:grid-cols-2 lg:grid-cols-3 mx-auto gap-8 py-8 my-8`}
       >
         {!loading && projectsToDisplay.length > 0 ? (
           projectsToDisplay.map((project: any) => (

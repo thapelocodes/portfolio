@@ -83,6 +83,10 @@
   }
 }
 
+* {
+  @apply m-0 p-0 box-border;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -141,7 +145,7 @@ body {
 
 @layer components {
   .tech-container {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    @apply container mx-auto px-4 pt-4 sm:px-6 lg:px-8 max-w-7xl;
   }
 
   .gradient-text {
@@ -194,7 +198,7 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-227%);
+      transform: translateX(-226.8%);
     }
   }
 
