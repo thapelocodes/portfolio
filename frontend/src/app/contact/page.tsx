@@ -26,8 +26,8 @@ const Contact = () => {
     <main className="p-8 min-h-screen md:max-w-screen-lg mx-auto overflow-hidden">
       <h1 className="text-3xl text-shadow text-primary my-4">Contact</h1>
       <h3 className="my-8">
-        Connect with me across multiple platforms as{" "}
-        <em className="text-primary">thapelocodes</em>
+        Connect with us across multiple platforms as{" "}
+        <em className="text-primary text-white text-shadow">thapelocodes</em>
       </h3>
       <div className="max-w-screen-sm mx-auto overflow-hidden py-8">
         <SocialSlider />

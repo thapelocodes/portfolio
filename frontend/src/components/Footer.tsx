@@ -48,7 +48,10 @@ const Footer = () => {
               />
               <h3 className="text-primary text-shadow text-xl font-bold">
                 <span className="text-sky-600 dark:text-sky-500">thapelo</span>
-                codes
+                codes{" "}
+                <span className="text-muted-forground text-secondary">
+                  (Pty) Ltd
+                </span>
               </h3>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">
@@ -145,7 +148,8 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between py-8 gap-2">
           <p className="m-3 md:ml-0 text-secondary flex">
-            &copy; {new Date().getFullYear()} thapelocodes. All rights reserved.
+            Copyright &copy; {new Date().getFullYear()} thapelocodes (Pty) Ltd.
+            All rights reserved.
           </p>
           <button
             className="flex items-center gap-2 w-fit mx-auto md:mx-0 text-secondary text-sm p-2 md:pr-0 my-1 hover:text-tech-lightBlue transition-all duration-300 group"

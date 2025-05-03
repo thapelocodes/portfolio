@@ -54,8 +54,8 @@ const HeroSection = () => {
                 isLoaded && "opacity-100"
               }`}
             >
-              Software Engineer & Frontend Developer specializing in fast,
-              eye-catching web applications that grow your digital reach.
+              Personal brand turned company. Led by a developer who gets you
+              🫱🏾‍🫲🏾
             </p>
             <div
               className={`flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start opacity-0 transition-all duration-1000 delay-500 ${
@@ -72,7 +72,7 @@ const HeroSection = () => {
                 onClick={handleScrollToProjects}
                 className="text-xs sm:text-sm md:text-md lg:text-lg text-secondary border border-tech-blue hover:bg-tech-blue/10 text-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300"
               >
-                View My Work
+                Projects Built
               </button>
             </div>
           </div>
