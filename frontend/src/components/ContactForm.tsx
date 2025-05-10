@@ -23,7 +23,7 @@ const ContactForm = () => {
       const windowHeight = window.innerHeight;
 
       // If the element is in the viewport
-      if (top < windowHeight - 200 && bottom > 0) {
+      if (top < windowHeight - 20) {
         setIsVisible(true);
       }
     }
@@ -69,13 +69,11 @@ const ContactForm = () => {
 
   return (
     <section
-      ref={elementRef}
       className={`projects w-full md:max-w-screen-lg my-5 mx-auto md:p-6 mt-20 transition-transform duration-500 ${
-        isVisible
-          ? "animate-slideInLeft"
-          : "opacity-0 transform -translate-x-full"
+        isVisible ? "animate-slide-in-from-bottom" : "opacity-0 transform"
       }`}
       id="contact"
+      ref={elementRef}
     >
       <h2 className="w-fit mx-auto text-2xl p-2 text-shadow text-tertiary">
         Let&apos;s Connect

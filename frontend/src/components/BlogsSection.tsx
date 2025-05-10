@@ -25,7 +25,7 @@ const BlogsSection = () => {
       const windowHeight = window.innerHeight;
 
       // If the element is in the viewport
-      if (top < windowHeight - 200 && bottom > 0) {
+      if (top < windowHeight - 20) {
         setIsVisible(true);
       }
     }
@@ -62,8 +62,8 @@ const BlogsSection = () => {
       ref={elementRef}
       className={`blogs rounded-2xl md:max-w-screen-lg p-3 pt-20 w-full my-5 mx-auto text-center transition-transform duration-500 ${
         isVisible
-          ? "animate-slidInLeft"
-          : "opacity-0 transform translate-x-full"
+          ? "animate-slide-in-from-bottom"
+          : "opacity-0 transform translate-y-full"
       }`}
       id="blog"
     >

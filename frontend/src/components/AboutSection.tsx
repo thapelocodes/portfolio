@@ -1,23 +1,40 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const AboutSection = () => {
+  const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  // Function to check if the element is visible in the viewport
+  const checkIfVisible = () => {
+    if (elementRef.current) {
+      const { top, bottom } = elementRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // If the element is in the viewport
+      if (top < windowHeight - 20) {
+        setIsVisible(true);
+      }
+    }
+  };
+
   useEffect(() => {
-    setIsVisible(true);
+    window.addEventListener("scroll", checkIfVisible);
+    checkIfVisible(); // Initial check on mount
+
+    return () => {
+      window.removeEventListener("scroll", checkIfVisible);
+    };
   }, []);
 
   return (
     <section
       className={`about p-5 pt-20 lg:max-w-screen-lg my-5 mx-auto text-center rounded-2xl ${
-        isVisible
-          ? "animate-slideInLeft"
-          : "opacity-0 transform translate-x-full"
+        isVisible ? "animate-slide-in-from-bottom" : ""
       } transition duration-500`}
       id="about"
+      ref={elementRef}
     >
       <h2 className="md:hidden text-shadow text-tertiary text-2xl md:text-left md:flex flex-col">
         Built on code. Driven by design. Focused on results.

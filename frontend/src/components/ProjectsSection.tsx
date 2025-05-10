@@ -10,7 +10,7 @@ import LoadingIconWhite from "@/assets/loading-white-svgrepo-com.svg";
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
   const projectsToDisplay =
-    projects.length >= 3 ? projects.reverse().slice(0, 3) : projects.reverse();
+    projects.length > 3 ? projects.reverse().slice(0, 3) : projects.reverse();
 
   const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +23,7 @@ const ProjectsSection = () => {
       const windowHeight = window.innerHeight;
 
       // If the element is in the viewport
-      if (top < windowHeight - 200 && bottom > 0) {
+      if (top < windowHeight - 20) {
         setIsVisible(true);
       }
     }
@@ -56,13 +56,11 @@ const ProjectsSection = () => {
 
   return (
     <section
-      ref={elementRef}
       className={`projects md:max-w-screen-lg my-8 mx-auto py-3 pt-20 transition-transform duration-500 ${
-        isVisible
-          ? "animate-slideInLeft"
-          : "opacity-0 transform -translate-x-full"
+        isVisible ? "animate-slide-in-from-bottom" : "opacity-0 transform"
       }`}
       id="projects"
+      ref={elementRef}
     >
       <h2 className="text-shadow text-tertiary m-2 text-2xl">
         Featured Projects
