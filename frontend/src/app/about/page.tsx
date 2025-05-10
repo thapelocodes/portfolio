@@ -23,7 +23,7 @@ const About = () => {
         </h1>
         <div className="md:flex flex-row-reverse justify-center items-center my-8 mx-6">
           <div className="business-profile max-w-xs md:w-80 mx-auto my-8 md:my-auto self-end"></div>
-          <div className="md:flex flex-col md:w-[50%] mx-auto md:mx-0 md:self-center p-3">
+          <div className="md:flex flex-col md:w-[30%] mx-auto md:self-center">
             <div className="my-8 text-xl font-bold gap-4 md:text-left md:mx-6">
               <h4>Built on code.</h4>
               <h4>Driven by design.</h4>
@@ -48,21 +48,21 @@ const About = () => {
         </div>
       </section>
       {/* The Mind Behind Section */}
-      <section className="py-12">
+      <section className="py-12 mx-6">
         <h2 className="md:hidden text-2xl text-shadow text-tertiary my-8">
           The Mind Behind thapelocodes™
         </h2>
-        <div className="md:flex flex-row-reverse justify-center items-center mx-6">
+        <div className="md:flex justify-center items-center mx-4">
           <div className="profile max-w-xs md:w-80 mx-auto my-8 md:my-auto self-end"></div>
-          <div className="md:flex flex-col md:items-start md:w-[50%] md:self-center p-3">
+          <div className="md:flex flex-col md:items-start md:w-[30%] md:self-center mx-auto">
             <h2 className="hidden md:block text-2xl text-shadow text-tertiaryw-fit mx-auto md:mx-6 my-8 text-left">
               The Mind Behind thapelocodes™
             </h2>
-            <p className="my-3 text-justify mx-6 ">
+            <p className="my-3 text-justify">
               Hi there! I&apos;m Thapelo and I write code, build experiences and
               help startups grow.
             </p>
-            <p className="my-3 text-justify mx-6 ">
+            <p className="my-3 text-justify">
               What started as{" "}
               <span className="text-primary text-white">thapelocodes</span> - a
               handle I used to share my dev work - has become a full-fledged
@@ -71,7 +71,7 @@ const About = () => {
               with clients to craft digital products that meet goals{" "}
               <span className="italic">and</span> delight users.
             </p>
-            <p className="my-3 text-justify mx-6 ">
+            <p className="my-3 text-justify">
               View my resume and certification below to learn more about my
               background and experience.
             </p>
@@ -123,7 +123,7 @@ const About = () => {
         <h2 className="text-2xl text-shadow text-tertiary my-8">
           What We Value
         </h2>
-        <ul className="py-6 w-fit md:w-11/12 mx-auto list-disc list-inside grid md:grid-cols-2 gap-4 text-justify">
+        <ul className="py-6 w-fit md:w-7/12 mx-6 md:mx-auto list-disc list-inside grid md:grid-cols-2 gap-4 text-justify">
           <li>
             <span className="font-bold">Speed</span> - Fast delivery without
             cutting corners
